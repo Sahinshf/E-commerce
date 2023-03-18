@@ -1,0 +1,401 @@
+@import "../abstracts/mixin";
+@import "../abstracts/variable";
+
+//***********************
+//Header Top Section Start
+
+.header_top {
+  padding: 8px 0;
+  font-size: 1.4rem;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.103);
+
+  &_container {
+    @include d-flex(_, space-between, center);
+  }
+
+  &_list {
+    &_item {
+      margin-right: 15px;
+      padding-right: 15px;
+      line-height: 1.5em;
+      color: $color-main-black;
+      cursor: pointer;
+    }
+  }
+
+  &_contact {
+    @include d-flex(_, center, center);
+    &_item {
+      color: $color-main-black;
+      border-right: 1px rgba(128, 128, 128, 0.236) solid;
+
+      margin-right: 15px;
+      padding-right: 15px;
+      line-height: 1.5em;
+      cursor: pointer;
+    }
+  }
+
+  &_icons {
+    color: $color-main-gray;
+    &_prop {
+      cursor: pointer;
+      margin-right: 16px;
+    }
+
+    &_prop:hover {
+      transition: all 0.4s ease-in-out 0s;
+      transform: rotateY(0.5turn);
+      color: $color-main-orange;
+    }
+  }
+}
+
+//Header Top Section End
+//**********************
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+//***************************
+//Header Middle Section Start
+.header_middle {
+  // position: sticky;
+  // top: 34px;
+  padding: 24px 0;
+  font-size: 1.6rem;
+
+  &_container {
+    @include d-flex(_, space-between, center);
+  }
+
+  &_logo {
+    background-image: url("../sass/image/homepage/headerLogo.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 20rem;
+    height: 4.8rem;
+  }
+
+  .header_middle_nav.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transition: all 0.4s linear;
+  }
+
+  &_nav {
+    &_pages {
+      display: flex;
+      position: relative;
+
+      &:hover {
+        .header_middle_nav_pages_item {
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+          transition: all 0.4s linear;
+        }
+      }
+
+      &_item {
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+        position: absolute;
+        top: 100%;
+        width: 20rem;
+        padding: 5px 0;
+      }
+    }
+
+    &_angle {
+      padding-left: 10px;
+      font-size: 10px;
+    }
+    &_right_angle {
+      font-size: 10px;
+      padding-left: 10px;
+    }
+
+    &_list {
+      @include d-flex(_, center, center);
+      & li {
+        color: #141517;
+        margin: 0 20px;
+        font-weight: 600;
+        line-height: 1.5em;
+        cursor: pointer;
+      }
+
+      & li:hover {
+        color: $color-main-orange;
+        transition: all 0.2s linear;
+      }
+
+      .new {
+        position: relative;
+        display: inline-block;
+      }
+      .new::before {
+        content: "New";
+        position: absolute;
+        background: #ff2020;
+        color: #fff;
+        text-align: center;
+        border-radius: 4px;
+        font-size: 10px;
+        top: -12px;
+        right: -10px;
+        padding: 1px 4px;
+        letter-spacing: 3px;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+  }
+
+  &_left {
+    @include d-flex(_, center, center);
+
+    &_menu {
+      padding-right: 30px;
+
+      &_bar {
+        font-size: 20px;
+      }
+      &_bar.fa-times {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &_right {
+    @include d-flex(_, center, center);
+    &_icon {
+      margin: 0 20px;
+
+      &_prop:hover {
+        color: $color-main-orange;
+        transition: all 0.2s linear;
+        cursor: pointer;
+      }
+
+      &_prop {
+        font-size: 20px;
+        font-weight: 400;
+        color: #292621;
+      }
+    }
+
+    &_shopping_cart {
+      position: relative;
+    }
+
+    &_cart_count {
+      position: absolute;
+      right: -14px;
+      top: -18px;
+      background-color: $color-main-orange;
+      border-radius: 50%;
+      padding: 1px 7px;
+      font-size: 12px;
+      color: white;
+    }
+  }
+
+  .search_box {
+    margin-top: 10px;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+    &_prop {
+      @include d-flex(_, space-between, center);
+      position: relative;
+    }
+
+    &_xmark {
+      position: absolute;
+      right: 20px;
+      color: #fff;
+      font-size: 16px;
+      padding: 0 10px;
+      cursor: pointer;
+    }
+
+    &_input {
+      background-color: $color-main-orange;
+      color: white;
+      border: none;
+      padding: 0;
+      width: 100%;
+      padding: 16px 14px;
+      &::placeholder {
+        font-weight: 500;
+        color: white;
+      }
+    }
+  }
+  .search_box.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transition: all 0.4s linear;
+  }
+
+  .search_box.close {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: all 0.4s linear;
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 5rem 6rem;
+  box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: all 0.5s;
+
+  &_header {
+    text-align: center;
+
+    & h2 {
+      padding: 15px 0;
+    }
+  }
+
+  .modal_xmark {
+    color: $color-main-orange;
+    font-size: 30px;
+    top: 16px;
+  }
+
+  &_check {
+    padding: 15px 0;
+    @include d-flex(row, space-between, center);
+
+    &_input {
+      & input {
+        accent-color: $color-main-orange;
+        width: 20px;
+        height: 16px;
+      }
+      & label {
+        font-style: 1.7rem;
+        font-weight: 500;
+      }
+    }
+  }
+
+  &_submit {
+    margin-top: 60px;
+    @include d-flex(row, space-between, center);
+    &_que {
+      & span {
+        & a {
+          color: $color-main-orange;
+          cursor: pointer;
+        }
+      }
+    }
+
+    &_login {
+      color: white;
+      background-color: $color-main-orange;
+      cursor: pointer;
+      padding: 10px 20px;
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  transition: all 0.5s;
+}
+
+.btn--close-modal {
+  font-family: inherit;
+  color: inherit;
+  position: absolute;
+  top: 0.5rem;
+  right: 2rem;
+  font-size: 4rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.modal_form {
+  padding-top: 60px;
+
+  &_username {
+    @include d-flex(column, center, flex-start);
+
+    & label {
+      font-style: 1.7rem;
+      font-weight: 500;
+    }
+
+    & input::placeholder {
+      color: rgba(128, 128, 128, 0.434);
+    }
+  }
+  &_password {
+    @include d-flex(column, center, flex-start);
+    padding-top: 40px;
+
+    & label {
+      font-style: 1.7rem;
+      font-weight: 500;
+    }
+
+    & input::placeholder {
+      color: rgba(128, 128, 128, 0.434);
+    }
+  }
+
+  &_email {
+    @include d-flex(column, center, flex-start);
+
+    & label {
+      font-style: 1.7rem;
+      font-weight: 500;
+    }
+
+    padding-top: 40px;
+    & input::placeholder {
+      color: rgba(128, 128, 128, 0.434);
+    }
+  }
+
+  &_email_input {
+    width: 50rem;
+    padding: 10px;
+    border: 1px rgba(128, 128, 128, 0.19) solid;
+    margin-top: 10px;
+  }
+  &_password_input {
+    width: 50rem;
+    padding: 10px;
+    border: 1px rgba(128, 128, 128, 0.19) solid;
+    margin-top: 10px;
+  }
+}
+
+.modal_forgot_passw {
+  cursor: pointer;
+  color: $color-main-orange;
+}
+
+//Header Middle Section End
+//***************************
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

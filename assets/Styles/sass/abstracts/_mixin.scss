@@ -1,0 +1,20 @@
+@mixin d-grid($grid, $repeat, $justifyContent, $alignItem) {
+  display: $grid;
+  grid-template-columns: $repeat;
+  justify-content: $justifyContent;
+  align-items: $alignItem;
+}
+
+@mixin d-flex($flexDirection, $justifyContent, $alignItem) {
+  display: flex;
+  flex-direction: $flexDirection;
+  justify-content: $justifyContent;
+  align-items: $alignItem;
+}
+
+@mixin d-bg($url) {
+  background: $url;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

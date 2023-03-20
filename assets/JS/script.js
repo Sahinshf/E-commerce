@@ -5,6 +5,18 @@ let searchBtn = document.querySelector(".header_middle_search");
 let searchBox = document.querySelector(".search_box");
 let closeSearchBox = document.querySelector(".search_box_xmark");
 
+//#region Header Fixed
+const fixedHeader = document.querySelector(".header_fixed");
+
+window.addEventListener("scroll", function () {
+  if (this.window.scrollY > 33) {
+    fixedHeader.classList.add("fixed_header");
+  } else {
+    fixedHeader.classList.remove("fixed_header");
+  }
+});
+//#endregion
+
 //#region Navigation Bar
 
 menuBtn.addEventListener("click", () => {
@@ -100,4 +112,82 @@ overlay.addEventListener("click", () => {
   overlay.classList.add("hidden");
 });
 //#endregion
+//#endregion
+
+// #region Banner Slider
+let swiper = new Swiper(".mySwiper", {
+  spaceBetween: 30,
+  centeredSlides: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+//#endregion
+
+//#region Banner Text Animation
+
+let titleAnimation = document.querySelectorAll(".banner_text_title");
+let textAnimation = document.querySelectorAll(".banner_text_info");
+let buttonAnimation = document.querySelectorAll(".banner_button");
+titleAnimation[0].classList.add("animate__bounceIn");
+textAnimation[0].classList.add("animate__fadeInUp");
+buttonAnimation[0].classList.add("animate__fadeInUp");
+
+swiper.on("slideChange", function (e) {
+  if (swiper.activeIndex == 0) {
+    titleAnimation[0].classList.add("animate__bounceIn");
+    textAnimation[0].classList.add("animate__fadeInUp");
+    buttonAnimation[0].classList.add("animate__fadeInUp");
+
+    titleAnimation[1].classList.remove("animate__bounceIn");
+    textAnimation[1].classList.remove("animate__fadeInUp");
+    buttonAnimation[1].classList.remove("animate__fadeInUp");
+  } else {
+    titleAnimation[0].classList.remove("animate__bounceIn");
+    textAnimation[0].classList.remove("animate__fadeInUp");
+    buttonAnimation[0].classList.remove("animate__fadeInUp");
+
+    titleAnimation[1].classList.add("animate__bounceIn");
+    textAnimation[1].classList.add("animate__fadeInUp");
+    buttonAnimation[1].classList.add("animate__fadeInUp");
+  }
+});
+
+//#endregion
+
+//#region Product Swiper
+
+let swiper2 = new Swiper(".mySwiper2", {
+  slidesPerView: 2,
+  spaceBetween: 30,
+  pagination: {
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    992: {
+      slidesPerView: 4,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+  },
+});
+
 //#endregion

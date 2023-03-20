@@ -5,6 +5,7 @@
 //Header Top Section Start
 
 .header_top {
+  background-color: #fff;
   padding: 8px 0;
   font-size: 1.4rem;
   border-bottom: 1px solid rgba(128, 128, 128, 0.103);
@@ -55,6 +56,8 @@
 //**********************
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 //***************************
 //Header Middle Section Start
@@ -63,9 +66,11 @@
   // top: 34px;
   padding: 24px 0;
   font-size: 1.6rem;
+  background-color: #fff;
 
   &_container {
     @include d-flex(_, space-between, center);
+    padding: 20px 0;
   }
 
   &_logo {
@@ -83,6 +88,7 @@
   }
 
   &_nav {
+    z-index: 20;
     &_pages {
       display: flex;
       position: relative;
@@ -96,11 +102,15 @@
 
       &_item {
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        background-color: #fff;
 
         position: absolute;
         top: 100%;
         width: 20rem;
         padding: 5px 0;
+
+        border: none;
+        border-radius: 4px;
       }
     }
 
@@ -200,6 +210,8 @@
   }
 
   .search_box {
+    position: relative;
+    z-index: 999;
     margin-top: 10px;
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 
@@ -234,7 +246,6 @@
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     transition: all 0.4s linear;
   }
-
   .search_box.close {
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     transition: all 0.4s linear;
@@ -395,7 +406,282 @@
   color: $color-main-orange;
 }
 
+.fixed_header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10000;
+  background-color: #fff;
+}
+
 //Header Middle Section End
 //***************************
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+//***************************
+//Header Bottom Section Start
+
+.header_bottom {
+  background-color: #16161a;
+  position: relative;
+  top: -47px;
+  &_text {
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: #fff;
+    padding: 14.5px 0;
+
+    & span {
+      color: #cebd9c;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}
+
+//Header Bottom Section End
+//***************************
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+//***************************
+//Banner Slider Section Start
+
+.banner {
+  position: relative;
+  top: -74px;
+}
+
+.swiper {
+  width: 100%;
+  height: 700px;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+}
+
+.image1 {
+  background-image: url("../sass/image/homepage/h1_hero1.jpg.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.image2 {
+  background-image: url("../sass/image/homepage/h1_hero2.jpg.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.banner_text {
+  width: 54rem;
+
+  & h2 {
+    font-family: "Clicker Script", cursive;
+    font-size: 5rem;
+    color: #ff2020;
+    line-height: 1.2em;
+  }
+
+  &_title {
+    font-size: 5rem;
+    font-weight: 500;
+
+    // animation: bounce 3.6s infinite linear;
+    // animation-delay: 0.2s;
+  }
+
+  &_info {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #74706b;
+    line-height: 1.6em;
+    padding: 0 50px;
+    margin-bottom: 30px;
+  }
+}
+
+.banner_button {
+  font-size: 1.4rem;
+  padding: 15px 47px;
+  line-height: 1.2em;
+  font-weight: 500;
+  background-color: #292621;
+}
+
+.banner_text_container {
+  position: relative;
+  top: 38%;
+}
+
+.banner_text_container_left {
+  left: 40%;
+}
+
+.banner_text_title {
+  --animate-duration: 1.5s;
+  --animate-delay: 0.2s;
+}
+
+//Banner Slider Section End
+//***************************
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+//***************************
+//Category Section Start
+.category {
+  &_item {
+    @include d-flex(_, center, center);
+
+    & h3 {
+      color: #fff;
+      font-size: 2.4rem;
+      font-weight: 600;
+      line-height: 1.2em;
+      margin: 10px 0;
+    }
+
+    & a {
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: #cebd9c;
+      text-decoration: underline;
+      cursor: pointer;
+      padding: 10px 0;
+
+      transition: all 0.4s ease-out 0s;
+
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    &_men {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(41, 38, 33, 0) 40%,
+          #292621 100%
+        ),
+        url("../sass/image/homepage/items1.jpg.webp");
+      width: 41rem;
+      height: 36rem;
+    }
+
+    &_women {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(41, 38, 33, 0) 40%,
+          #292621 100%
+        ),
+        url("../sass/image/homepage/items2.jpg.webp");
+      width: 41rem;
+      height: 36rem;
+    }
+
+    &_baby {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(41, 38, 33, 0) 40%,
+          #292621 100%
+        ),
+        url("../sass/image/homepage/items3.jpg.webp");
+      width: 41rem;
+      height: 36rem;
+    }
+
+    &_details {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: 12px;
+
+      @include d-flex(column, flex-end, center);
+    }
+  }
+  // clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  // clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+.category_item_details:hover {
+  .category_item_details_btn {
+    opacity: 1;
+    visibility: visible;
+    padding-bottom: 40px;
+  }
+}
+.category_item_details:hover {
+  transform: scale(1.02);
+  transition: all 0.2s linear;
+}
+//Category Section End
+//***************************
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+//***************************
+//Product Section Start
+.mySwiper2 {
+  width: 100%;
+  height: 440px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product_items {
+  background-image: url("../sass/image/homepage/latest1.jpg.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 330px;
+}
+
+.product {
+  margin-top: 100px;
+}
+.product_cart {
+  @include d-flex(column, center, center);
+}
+.product_text {
+  color: #292621;
+  font-size: 1.6rem;
+  font-weight: 400;
+  padding: 14px 0;
+}
+.product_price {
+  @include d-flex(_, center, center);
+
+  .product_new_price {
+    margin-right: 10px;
+    color: #74706b;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1.6rem;
+  }
+  .product_old_price {
+    margin-left: 10px;
+    color: #cebd9c;
+    text-decoration: line-through;
+  }
+}

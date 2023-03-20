@@ -5,7 +5,7 @@
   display: none;
 }
 .header_middle_nav_pages_item li {
-  margin: 0;
+  margin-left: 4px;
 }
 .header_middle_nav_right_angle {
   display: none;
@@ -18,6 +18,9 @@
 
   .header_middle_nav_list li {
     margin: 0 10px;
+  }
+  .product_items {
+    height: 300px;
   }
 }
 
@@ -39,7 +42,7 @@
   }
 
   .header_middle_nav {
-    width: 200px;
+    width: 100%;
     background: #fff;
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 
@@ -52,7 +55,7 @@
       display: block;
       margin: 10px 0;
       & li {
-        margin: 10px 0;
+        margin: 10px 5px;
       }
     }
   }
@@ -64,9 +67,6 @@
   .header_middle_nav_right_angle {
     display: block;
   }
-  // .header_middle_nav_pages {
-  //   position: relative;
-  // }
 
   .header_middle_nav_pages:hover,
   .header_middle_nav_pages_item {
@@ -76,11 +76,21 @@
     display: none;
   }
 
-  // .header_middle_nav_pages_item {
-  //   position: absolute;
-  //   left: 100%;
-  //   top: 0;
-  // }
+  .swiper {
+    height: 500px;
+  }
+
+  .banner_text_container {
+    top: 24%;
+  }
+
+  .banner_text_container_left {
+    left: 30%;
+  }
+
+  .category_item_details {
+    height: 26rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -91,9 +101,22 @@
   .header_top_list {
     display: none;
   }
+  .swiper {
+    height: 400px;
+  }
+
+  .banner_text_container_left {
+    left: 12%;
+  }
+  .category_item {
+    @include d-flex(column, center, center);
+  }
 }
 
 @media screen and (max-width: 576px) {
+  html {
+    font-size: 8px;
+  }
   .modal_submit_login {
     width: 100%;
     text-align: center;
@@ -106,10 +129,21 @@
   .modal_form_email_input {
     width: 30rem;
   }
+  .swiper {
+    height: 360px;
+  }
+  .banner_text_container {
+    position: static;
+  }
+  .banner_text {
+    margin: 0 auto;
+    padding-top: 50px;
+  }
 }
 
 // Container Property
-.container {
+.container,
+.container_text {
   width: 100%;
   margin: 0 auto;
   padding: 0 15px;
@@ -130,12 +164,14 @@
   }
 }
 @media screen and (min-width: 1200px) {
-  .container {
+  .container,
+  .container_text {
     max-width: 1140px;
   }
 }
 @media screen and (min-width: 1400px) {
-  .container {
+  .container,
+  .container_text {
     max-width: 1320px;
   }
 }

@@ -6,12 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>END</title>
     <link rel="stylesheet" href="assets/Styles/sass/main.css" />
+
+    <!-- Icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
       integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
+    />
+
+    <!-- Slider -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+
+    <!-- Animation -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
   </head>
   <body>
@@ -50,66 +64,70 @@
 
       <!-- Header Middle Section Start -->
       <section class="header_middle">
-        <div class="container">
-          <div class="header_middle_container">
-            <div class="header_middle_left">
-              <div class="header_middle_left_menu">
-                <i class="fa-solid fa-bars header_middle_left_menu_bar"></i>
-              </div>
+        <div class="header_fixed">
+          <div class="container">
+            <div class="header_middle_container">
+              <div class="header_middle_left">
+                <div class="header_middle_left_menu">
+                  <i class="fa-solid fa-bars header_middle_left_menu_bar"></i>
+                </div>
 
-              <div class="header_middle_logo">
-                <a href="#"></a>
-              </div>
-            </div>
-
-            <nav class="header_middle_nav">
-              <ul class="header_middle_nav_list">
-                <li>Home<a href="#"></a></li>
-                <li>Men<a href="#"></a></li>
-                <li>Women<a href="#"></a></li>
-                <li class="new">Baby Collection<a href="#"></a></li>
-                <li class="header_middle_nav_pages">
-                  Pages
-                  <span class="header_middle_nav_angle">
-                    <i class="fa-solid fa-angle-down"></i>
-                  </span>
-                  <span class="header_middle_nav_right_angle">
-                    <i class="fa-solid fa-chevron-right"></i>
-                  </span>
-                  <ul class="header_middle_nav_pages_item">
-                    <li>Login</li>
-                    <li>Cart</li>
-                    <li>Product Details</li>
-                    <li>Product Checkout</li>
-                  </ul>
+                <div class="header_middle_logo">
                   <a href="#"></a>
-                </li>
-                <li>Blog<a href="#"></a></li>
-                <li>Contact<a href="#"></a></li>
-              </ul>
-            </nav>
-
-            <div class="header_middle_right">
-              <div class="header_middle_right_icon header_middle_search">
-                <i
-                  class="header_middle_right_icon_prop fa-solid fa-magnifying-glass"
-                ></i>
+                </div>
               </div>
 
-              <div
-                class="header_middle_right_icon header_middle_user btn--show-modal nav__link nav__link--btn"
-              >
-                <i class="header_middle_right_icon_prop fa-regular fa-user"></i>
-              </div>
+              <nav class="header_middle_nav">
+                <ul class="header_middle_nav_list">
+                  <li>Home<a href="#"></a></li>
+                  <li>Men<a href="#"></a></li>
+                  <li>Women<a href="#"></a></li>
+                  <li class="new">Baby Collection<a href="#"></a></li>
+                  <li class="header_middle_nav_pages">
+                    Pages
+                    <span class="header_middle_nav_angle">
+                      <i class="fa-solid fa-angle-down"></i>
+                    </span>
+                    <span class="header_middle_nav_right_angle">
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </span>
+                    <ul class="header_middle_nav_pages_item">
+                      <li>Login</li>
+                      <li>Cart</li>
+                      <li>Product Details</li>
+                      <li>Product Checkout</li>
+                    </ul>
+                    <a href="#"></a>
+                  </li>
+                  <li>Blog<a href="#"></a></li>
+                  <li>Contact<a href="#"></a></li>
+                </ul>
+              </nav>
 
-              <div
-                class="header_middle_right_icon header_middle_right_shopping_cart"
-              >
-                <i
-                  class="header_middle_right_icon_prop fa-solid fa-cart-shopping"
+              <div class="header_middle_right">
+                <div class="header_middle_right_icon header_middle_search">
+                  <i
+                    class="header_middle_right_icon_prop fa-solid fa-magnifying-glass"
+                  ></i>
+                </div>
+
+                <div
+                  class="header_middle_right_icon header_middle_user btn--show-modal nav__link nav__link--btn"
                 >
-                </i>
-                <p class="header_middle_right_cart_count">0</p>
+                  <i
+                    class="header_middle_right_icon_prop fa-regular fa-user"
+                  ></i>
+                </div>
+
+                <div
+                  class="header_middle_right_icon header_middle_right_shopping_cart"
+                >
+                  <i
+                    class="header_middle_right_icon_prop fa-solid fa-cart-shopping"
+                  >
+                  </i>
+                  <p class="header_middle_right_cart_count">0</p>
+                </div>
               </div>
             </div>
           </div>
@@ -237,11 +255,152 @@
           </div>
         </div>
 
+        <section class="header_bottom">
+          <div class="container">
+            <p class="header_bottom_text">
+              Sale Up To 50% Biggest Discounts. Hurry! Limited Perriod Offer
+              <span>Shop Now</span>
+            </p>
+          </div>
+        </section>
+
         <div class="overlay hidden"></div>
       </section>
       <!-- Header Middle Section End -->
+
+      <!-- Header Bottom Section Start -->
+      <!-- Header Bottom Section End -->
     </header>
 
+    <main>
+      <!-- Banner Section Start -->
+      <section class="banner">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide image2">
+              <div
+                class="container_text banner_text_container banner_text_container_left"
+              >
+                <div class="banner_text">
+                  <h2>Fashion Sale</h2>
+                  <p class="banner_text_title animate__animated">
+                    Minimal Menzzz Style
+                  </p>
+                  <p class="banner_text_info animate__animated">
+                    Consectetur adipisicing elit. Laborum fuga incidunt
+                    laboriosam voluptas iure, delectus dignissimos facilis neque
+                    nulla earum.
+                  </p>
+                  <a class="banner_button animate__animated" href="#"
+                    >Shop Now</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide image1">
+              <div class="container_text banner_text_container">
+                <div class="banner_text">
+                  <h2>Fashion Sale</h2>
+                  <p class="banner_text_title animate__animated">
+                    Minimal Menz Style
+                  </p>
+                  <p class="banner_text_info animate__animated">
+                    Consectetur adipisicing elit. Laborum fuga incidunt
+                    laboriosam voluptas iure, delectus dignissimos facilis neque
+                    nulla earum.
+                  </p>
+                  <a class="banner_button animate__animated" href="#"
+                    >Shop Now</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next swiper_button_prop"></div>
+          <div class="swiper-button-prev swiper_button_prop"></div>
+          <!-- <div class="swiper-pagination"></div> -->
+        </div>
+      </section>
+      <!-- Banner Section End -->
+
+      <!-- Category Section Start -->
+      <section class="category">
+        <div class="container">
+          <div class="category_item">
+            <div class="category_item_details category_item_men">
+              <h3>Men`s Fashion</h3>
+              <a class="category_item_details_btn" href="#">Shop Now</a>
+            </div>
+
+            <div class="category_item_details category_item_women">
+              <h3>Women`s Fashion</h3>
+              <a class="category_item_details_btn" href="#">Shop Now</a>
+            </div>
+
+            <div class="category_item_details category_item_baby">
+              <h3>Baby Fashion</h3>
+              <a class="category_item_details_btn" href="#">Shop Now</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Category Section End -->
+
+      <!-- Category Section Start -->
+      <section class="product">
+        <div class="container">
+          <div class="swiper mySwiper2">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="product_items"></div>
+                <p class="product_text">Cashmere Tank + Bag</p>
+                <div class="product_price">
+                  <p class="product_new_price">$98.00</p>
+                  <p class="product_old_price">$120.00</p>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="product_items"></div>
+                <p class="product_text">Cashmere Tank + Bag</p>
+                <div class="product_price">
+                  <p class="product_new_price">$98.00</p>
+                  <p class="product_old_price">$120.00</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="product_items"></div>
+                <p class="product_text">Cashmere Tank + Bag</p>
+                <div class="product_price">
+                  <p class="product_new_price">$98.00</p>
+                  <p class="product_old_price">$120.00</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="product_items"></div>
+                <p class="product_text">Cashmere Tank + Bag</p>
+                <div class="product_price">
+                  <p class="product_new_price">$98.00</p>
+                  <p class="product_old_price">$120.00</p>
+                </div>
+              </div>
+              <div class="swiper-slide">Slide 5</div>
+              <div class="swiper-slide">Slide 6</div>
+              <div class="swiper-slide">Slide 7</div>
+              <div class="swiper-slide">Slide 8</div>
+              <div class="swiper-slide">Slide 9</div>
+            </div>
+            <!-- <div class="swiper-pagination"></div> -->
+            <div class="swiper-button-next swiper_button_prop"></div>
+            <div class="swiper-button-prev swiper_button_prop"></div>
+          </div>
+        </div>
+      </section>
+      <!-- Category Section End -->
+    </main>
+
+    <!-- Slider -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="assets/JS/script.js"></script>
   </body>
 </html>

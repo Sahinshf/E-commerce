@@ -13,7 +13,7 @@
 }
 
 @mixin d-bg($url) {
-  background: $url;
+  background-image: $url;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

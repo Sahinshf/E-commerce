@@ -1,0 +1,133 @@
+@import "../abstracts/mixin";
+@import "../abstracts/variable";
+
+// Title Section Star
+.contact_title {
+  position: relative;
+  top: -70px;
+
+  background-color: #f3ead8;
+  padding: 50px 0;
+  &_center {
+    @include d-flex(column, center, center);
+  }
+
+  &_main {
+    color: hsl(37, 11%, 15%);
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 12px;
+  }
+
+  &_text {
+    color: #74706b;
+    font-size: 1.4rem;
+    line-height: 1;
+    font-weight: 400;
+    padding: 0 10px;
+    &_border {
+      border-right: 1px #74706b solid;
+    }
+  }
+}
+// Title Section End
+
+// Get İn Touch Section Star
+.get_in_touch {
+  margin-top: 80px;
+}
+.get_in_touch_container {
+  display: flex;
+}
+.contact_form {
+  width: 83rem;
+
+  & textarea,
+  input {
+    font-family: inherit;
+    padding: 14px 6px;
+  }
+
+  &_send {
+    margin: 10px 0;
+    display: inline-block;
+    padding: 18px 44px;
+    font-family: "Jost", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    border: 0;
+    background: #fff;
+    color: $color-main-orange;
+    border: 1px solid $color-main-orange;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  textarea::placeholder,
+  input::placeholder {
+    font-weight: 200;
+    font-size: 1.3rem;
+  }
+  &_mess {
+    width: 98%;
+
+    resize: none;
+    overflow: hidden;
+    border: 1px solid #e5e6e9;
+    margin-bottom: 30px;
+    background: transparent;
+    height: 17rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+  }
+  &_inputs {
+    @include d-flex(_, space-between, center);
+    width: 100%;
+  }
+  & input {
+    border: 1px solid #e5e6e9;
+    background: transparent;
+    width: 44%;
+  }
+  &_subj {
+    margin-top: 30px;
+    resize: none;
+    overflow: hidden;
+    border: 1px solid #e5e6e9;
+    background: transparent;
+    width: 98%;
+  }
+}
+
+.contact_info {
+  margin-left: 12rem;
+
+  &_text {
+    font-family: "Jost", sans-serif;
+    color: #8a8a8a;
+    line-height: 30px;
+    margin-bottom: 15px;
+    font-weight: 400;
+    line-height: 1.6;
+    font-size: 1.6rem;
+  }
+
+  &_title {
+    color: #2a2a2a;
+    font-weight: 500;
+    font-size: 2rem;
+  }
+
+  &_item {
+    @include d-flex(_, flex-start, flex-start);
+    padding: 20px 0;
+
+    & i {
+      font-size: 3rem;
+      width: 50px;
+      padding-right: 16px;
+    }
+  }
+}
+// Get İn Touch Section End

@@ -167,18 +167,20 @@ swiper.on("slideChange", function (e) {
 //#region Product Swiper
 
 let swiper2 = new Swiper(".mySwiper2", {
-  slidesPerView: 2,
+  slidesPerView: 1,
   spaceBetween: 30,
   pagination: {
     clickable: true,
   },
+
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
   autoplay: {
-    delay: 4000,
+    delay: 2000,
     disableOnInteraction: false,
+    pauseOnMouseEnter: true,
   },
   breakpoints: {
     992: {
@@ -187,7 +189,189 @@ let swiper2 = new Swiper(".mySwiper2", {
     768: {
       slidesPerView: 3,
     },
+    450: {
+      slidesPerView: 2,
+    },
   },
 });
 
+//#endregion
+
+//#region Add Product to Slide
+const products = [
+  {
+    id: 1,
+    productName: "Cashmere Tank + Bag",
+    oldPrice: 120.0,
+    newPrice: 98.0,
+    productimage: "../assets/Styles/sass/image/homepage/latest1.jpg.webp",
+    category: "women",
+  },
+  {
+    id: 2,
+    productName: "Cashmere Tank + Bag",
+    oldPrice: 120.0,
+    newPrice: 100.0,
+    productimage: "../assets/Styles/sass/image/homepage/latest1.jpg.webp",
+    category: "women",
+  },
+  {
+    id: 3,
+    productName: "Cashmere Tank + Bag",
+    oldPrice: 120.0,
+    newPrice: 25,
+    productimage: "../assets/Styles/sass/image/homepage/latest1.jpg.webp",
+    category: "women",
+  },
+  {
+    id: 4,
+    productName: "Cashmere Tank + Bag",
+    oldPrice: 120.0,
+    newPrice: 98.0,
+    productimage: "../assets/Styles/sass/image/homepage/latest3.jpg.webp",
+    category: "men",
+  },
+  {
+    id: 5,
+    productName: "Cashmere Tank + Bag",
+    oldPrice: 120.0,
+    newPrice: 78.0,
+    productimage: "../assets/Styles/sass/image/homepage/latest3.jpg.webp",
+    category: "men",
+  },
+  {
+    id: 6,
+    productName: "Cashmere Tank + Bag",
+    oldPrice: 120.0,
+    newPrice: 98.0,
+    productimage: "../assets/Styles/sass/image/homepage/latest3.jpg.webp",
+    category: "men",
+  },
+  {
+    id: 7,
+    productName: "Cashmere Tank + Bag",
+    oldPrice: 120.0,
+    newPrice: 98.0,
+    productimage: "../assets/Styles/sass/image/homepage/latest2.jpg.webp",
+    category: "baby",
+  },
+  {
+    id: 8,
+    productName: "Cashmere Tank + Bag",
+    oldPrice: 120.0,
+    newPrice: 98.0,
+    productimage: "../assets/Styles/sass/image/homepage/latest2.jpg.webp",
+    category: "baby",
+  },
+  {
+    id: 9,
+    productName: "Cashmere Tank + Bag",
+    oldPrice: 120.0,
+    newPrice: 98.0,
+    productimage: "../assets/Styles/sass/image/homepage/latest2.jpg.webp",
+    category: "baby",
+  },
+];
+
+function addProduct() {
+  let swiperSlide = document.querySelector(".products_holder");
+  for (let i = 0; i < products.length; i++) {
+    swiperSlide.innerHTML += `<div class="swiper-slide product_cart ${products[i].category}">
+    <div
+      class="product_items"
+      style="
+        background-image: url(${products[i].productimage});
+      "
+    >
+      <div class="product_items_prop">
+      
+          <i class="fa-solid fa-cart-shopping hover_icon_prop add_to_cart"></i>
+      
+          <i class="fa-regular fa-heart hover_icon_prop"></i>
+      
+          <i
+            class="fa-solid fa-magnifying-glass-plus hover_icon_prop"
+          ></i>
+      </div>
+    </div>
+    <p class="product_text">${products[i].productName}</p>
+    <div class="product_price">
+      <p class="product_new_price">$${products[i].newPrice}.00</p>
+      <p class="product_old_price">$${products[i].oldPrice}.00</p>
+    </div>
+    </div>`;
+  }
+  swiper2.update();
+}
+addProduct();
+
+let categoriesBtn = document.querySelectorAll(".category_btn");
+let productCartItem = document.querySelectorAll(".product_cart");
+let addedProduct = [];
+
+let addToCartButton = document.querySelectorAll(".add_to_cart");
+
+categoriesBtn.forEach((button) => {
+  button.addEventListener("click", () => {
+    const selectedCategory = button.dataset.category;
+
+    productCartItem.forEach((card) => {
+      if (
+        selectedCategory === "fashion" ||
+        card.classList.contains(selectedCategory)
+      ) {
+        card.style.display = "block";
+        swiper2.update();
+      } else {
+        card.style.display = "none";
+        swiper2.update();
+      }
+    });
+  });
+});
+
+addToCartButton.forEach((btn, index) => {
+  btn.addEventListener("click", () => {
+    const findData = products.find((item) => item.id == index + 1);
+    const hasData = addedProduct.includes(findData);
+
+    hasData ? addedProduct : addedProduct.push(findData);
+
+    console.log(addedProduct);
+    localStorage.setItem("Added Product", JSON.stringify(addedProduct));
+  });
+});
+
+//#endregion
+
+//#region Add product to slide ( Second Way)
+// for (let i = 0; i < products.length; i++) {
+//   swiper2.appendSlide(`<div class="swiper-slide">
+//   <div
+//     class="product_items"
+//     style="
+//       background-image: url(${products[i].productimage});
+//     "
+//   >
+//     <div class="product_items_prop">
+//       <a href="#">
+//         <i class="fa-solid fa-cart-shopping hover_icon_prop add_to_cart"></i>
+//       </a>
+//       <a href="#">
+//         <i class="fa-regular fa-heart hover_icon_prop"></i>
+//       </a>
+//       <a href="#">
+//         <i
+//           class="fa-solid fa-magnifying-glass-plus hover_icon_prop"
+//         ></i>
+//       </a>
+//     </div>
+//   </div>
+//   <p class="product_text">${products[i].productName}</p>
+//   <div class="product_price">
+//     <p class="product_new_price">$${products[i].newPrice}.00</p>
+//     <p class="product_old_price">$${products[i].oldPrice}.00</p>
+//   </div>
+//   </div>`);
+// }
 //#endregion

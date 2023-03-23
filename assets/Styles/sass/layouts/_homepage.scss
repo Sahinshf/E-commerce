@@ -93,6 +93,10 @@
       display: flex;
       position: relative;
 
+      &_title {
+        display: flex;
+      }
+
       &:hover {
         .header_middle_nav_pages_item {
           clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
@@ -105,11 +109,13 @@
         background-color: #fff;
 
         position: absolute;
-        top: 100%;
+        top: 110%;
         width: 20rem;
         padding: 5px 0;
+        left: 20px;
 
         border: none;
+        border-top: 3px solid $color-main-orange;
         border-radius: 4px;
       }
     }
@@ -125,9 +131,16 @@
 
     &_list {
       @include d-flex(_, center, center);
-      & li {
+      & li a {
         color: #141517;
         margin: 0 20px;
+        font-weight: 600;
+        line-height: 1.5em;
+        cursor: pointer;
+      }
+
+      & li {
+        color: #141517;
         font-weight: 600;
         line-height: 1.5em;
         cursor: pointer;
@@ -361,7 +374,7 @@
   }
   &_password {
     @include d-flex(column, center, flex-start);
-    padding-top: 40px;
+    padding-top: 1.2rem;
 
     & label {
       font-style: 1.7rem;
@@ -381,7 +394,7 @@
       font-weight: 500;
     }
 
-    padding-top: 40px;
+    padding-top: 1.2rem;
     & input::placeholder {
       color: rgba(128, 128, 128, 0.434);
     }
@@ -399,6 +412,11 @@
     border: 1px rgba(128, 128, 128, 0.19) solid;
     margin-top: 10px;
   }
+}
+
+.modal {
+  overflow-y: auto;
+  max-height: 100%;
 }
 
 .modal_forgot_passw {
@@ -649,16 +667,98 @@
   align-items: center;
 }
 
+.swiper_button_prop {
+  background-color: #00000017;
+  padding: 50px 25px;
+  color: #fff !important;
+  fill: black !important;
+  stroke: black !important;
+}
+
+.swiper_button_prop2 {
+  color: #fff !important;
+  fill: black !important;
+  stroke: black !important;
+}
+
 .product_items {
-  background-image: url("../sass/image/homepage/latest1.jpg.webp");
+  // background-image: url("../sass/image/homepage/latest1.jpg.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 330px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 30px;
+
+  &_prop {
+    background-color: #fff;
+    display: none;
+  }
+
+  &_prop i {
+    font-size: 3rem;
+    padding: 8px 10px;
+    color: #292621;
+  }
 }
 
+.product_items:hover {
+  transition: all 0.4s linear;
+  transform: scale(1.04);
+  .product_items_prop {
+    display: inline-block;
+  }
+}
+
+.hover_icon_prop:hover {
+  transition: all 0.4s linear;
+  background-color: $color-main-orange;
+  color: white;
+}
 .product {
   margin-top: 100px;
+
+  &_header {
+    @include d-flex(_, space-between, center);
+    margin-bottom: 60px;
+    border-bottom: 1px solid #74706b;
+
+    & h1 {
+      font-size: 3.4rem;
+      color: #292621;
+      font-size: 34px;
+      font-weight: 500;
+      line-height: 1.3;
+      margin-bottom: 20px;
+    }
+
+    &_category {
+      @include d-flex(_, center, center);
+      color: #292621;
+      font-size: 1.6rem;
+      font-weight: 500;
+
+      & p {
+        border: 0;
+        transition: all 0.1s linear;
+        border-bottom: 4px solid transparent;
+        background: none;
+        margin-right: 15px;
+        padding: 36px 12px;
+        padding-top: 0;
+        color: #141517;
+        cursor: pointer;
+      }
+      & p:hover {
+        color: $color-main-orange;
+        border-bottom: 4px solid $color-main-orange;
+      }
+    }
+  }
 }
 .product_cart {
   @include d-flex(column, center, center);
@@ -685,3 +785,10 @@
     text-decoration: line-through;
   }
 }
+
+//Product Section Start
+//***************************
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

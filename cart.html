@@ -259,7 +259,6 @@
           </div>
         </div>
 
-        <!-- Header Bottom Section Start -->
         <section class="header_bottom">
           <div class="container">
             <p class="header_bottom_text">
@@ -268,7 +267,6 @@
             </p>
           </div>
         </section>
-        <!-- Header Bottom Section End -->
 
         <div class="overlay hidden"></div>
       </section>
@@ -276,122 +274,235 @@
     </header>
 
     <main>
-      <!-- Banner Section Start -->
-      <section class="banner">
-        <div class="swiper mySwiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide image2">
-              <div
-                class="container_text banner_text_container banner_text_container_left"
-              >
-                <div class="banner_text">
-                  <h2>Fashion Sale</h2>
-                  <p class="banner_text_title animate__animated">
-                    Minimal Menzzz Style
-                  </p>
-                  <p class="banner_text_info animate__animated">
-                    Consectetur adipisicing elit. Laborum fuga incidunt
-                    laboriosam voluptas iure, delectus dignissimos facilis neque
-                    nulla earum.
-                  </p>
-                  <a class="banner_button animate__animated" href="#"
-                    >Shop Now</a
-                  >
-                </div>
+      <!-- Title Section Star -->
+      <section class="contact_title">
+        <div class="container contact_title_center">
+          <h2 class="contact_title_main">Cart</h2>
+          <div>
+            <a
+              href="index.html"
+              class="contact_title_text contact_title_text_border"
+              >Home
+            </a>
+            <a href="#" class="contact_title_text">Cart</a>
+          </div>
+        </div>
+      </section>
+      <!-- Title Section End -->
+
+      <!-- Add To Cart Section Start -->
+      <section class="cart">
+        <div class="container">
+          <div class="cart_container_prop">
+            <div>
+              <table class="cart_table">
+                <thead class="cart_table_header">
+                  <tr class="cart_table_header_item">
+                    <th class="cart_table_header_item_product first_column">
+                      Product
+                    </th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                  </tr>
+                </thead>
+                <tbody class="table_body">
+                  <tr>
+                    <td class="cart_table_image">
+                      <div class="cart_table_image_item"></div>
+                      <p class="cart_table_image_title">
+                        Lorem, ipsum dolor sit amet
+                      </p>
+                    </td>
+                    <td class="cart_table_price align_item">30$</td>
+                    <td class="cart_table_quantity align_item">
+                      <div class="cart_table_quantity_item">
+                        <i class="fa-solid fa-minus decrease_product"></i>
+                        <p class="count_product">5</p>
+                        <i class="fa-solid fa-plus increase_product"></i>
+                      </div>
+                    </td>
+                    <td class="cart_table_total align_item">150$</td>
+                  </tr>
+
+                  <tr>
+                    <td class="cart_table_image">
+                      <div class="cart_table_image_item"></div>
+                      <p class="cart_table_image_title">
+                        Lorem, ipsum dolor sit amet
+                      </p>
+                    </td>
+                    <td class="cart_table_price align_item">30$</td>
+                    <td class="cart_table_quantity align_item">
+                      <div class="cart_table_quantity_item">
+                        <i class="fa-solid fa-minus decrease_product"></i>
+                        <p class="count_product">5</p>
+                        <i class="fa-solid fa-plus increase_product"></i>
+                      </div>
+                    </td>
+                    <td class="cart_table_total align_item">150$</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="cart_prop">
+                <div class="cart_prop_btn">Update Cart</div>
+                <div class="cart_prop_btn">Close Coupon</div>
               </div>
             </div>
-            <div class="swiper-slide image1">
-              <div class="container_text banner_text_container">
-                <div class="banner_text">
-                  <h2>Fashion Sale</h2>
-                  <p class="banner_text_title animate__animated">
-                    Minimal Menz Style
-                  </p>
-                  <p class="banner_text_info animate__animated">
-                    Consectetur adipisicing elit. Laborum fuga incidunt
-                    laboriosam voluptas iure, delectus dignissimos facilis neque
-                    nulla earum.
-                  </p>
-                  <a class="banner_button animate__animated" href="#"
-                    >Shop Now</a
-                  >
+
+            <div class="submit_product">
+              <h1>Summary</h1>
+              <div class="submit_product_shipping">
+                <div>
+                  <input
+                    type="radio"
+                    id="shipping_radio1"
+                    name="radio_btn_shipping"
+                    value="30"
+                  />
+                  <label for="shipping_radio1">Free Shipping </label><br />
                 </div>
+
+                <div>
+                  <input
+                    type="radio"
+                    id="shipping_radio4"
+                    name="radio_btn_shipping"
+                    value="30"
+                  />
+                  <label for="shipping_radio4">Local Delivery: $2.00 </label
+                  ><br />
+                </div>
+
+                <div>
+                  <input
+                    type="radio"
+                    id="shipping_radio2"
+                    name="radio_btn_shipping"
+                    value="60"
+                  />
+                  <label for="shipping_radio2">Flat Rate: $5.00 </label><br />
+                </div>
+
+                <div>
+                  <input
+                    type="radio"
+                    id="shipping_radio3"
+                    name="radio_btn_shipping"
+                    value="100"
+                  />
+                  <label for="shipping_radio3">Flat Rate: $10.00 </label
+                  ><br /><br />
+                </div>
+              </div>
+
+              <select class="submit_product_delivery_country">
+                <option value="azerbaijan">Azerbaijan</option>
+                <option value="argentina">Argentina</option>
+                <option value="brazil">Brazil</option>
+                <option value="peru">Peru</option>
+              </select>
+
+              <select class="submit_product_delivery_state">
+                <option value="state">Select a State</option>
+                <option value="state">Select a State</option>
+                <option value="state">Select a State</option>
+                <option value="state">Select a State</option>
+              </select>
+
+              <input
+                placeholder="Postcode/Zipcode"
+                class="submit_product_promocode"
+                type="text"
+              />
+
+              <div class="submit_product_total">
+                <p class="submit_product_total_title">Total</p>
+                <div class="total_price">0</div>
+              </div>
+              <div class="cart_prop_btn cart_prop_btn_center">
+                Update Details
               </div>
             </div>
           </div>
-          <div class="hide_arrow_btn">
-            <div class="swiper-button-next swiper_button_prop"></div>
-          </div>
-          <div class="hide_arrow_btn">
-            <div class="swiper-button-prev swiper_button_prop"></div>
-          </div>
-          <!-- <div class="swiper-pagination"></div> -->
         </div>
       </section>
-      <!-- Banner Section End -->
-
-      <!-- Category Section Start -->
-      <section class="category">
-        <div class="container">
-          <div class="category_item">
-            <div class="category_item_details category_item_men">
-              <h3>Men`s Fashion</h3>
-              <a class="category_item_details_btn" href="#">Shop Now</a>
-            </div>
-
-            <div class="category_item_details category_item_women">
-              <h3>Women`s Fashion</h3>
-              <a class="category_item_details_btn" href="#">Shop Now</a>
-            </div>
-
-            <div class="category_item_details category_item_baby">
-              <h3>Baby Fashion</h3>
-              <a class="category_item_details_btn" href="#">Shop Now</a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Category Section End -->
-
-      <!-- Product Section Start -->
-      <section class="product">
-        <div class="container">
-          <div class="product_header">
-            <h1>Trending This Week</h1>
-            <div class="product_header_category">
-              <p class="category_btn btn_men" data-category="men" href="#">
-                Men
-              </p>
-              <p class="category_btn btn_women" data-category="women" href="#">
-                Women
-              </p>
-              <p class="category_btn btn_baby" data-category="baby" href="#">
-                Baby
-              </p>
-              <p
-                class="category_btn btn_fashion"
-                data-category="fashion"
-                href="#"
-              >
-                Fashion
-              </p>
-            </div>
-          </div>
-
-          <div class="swiper mySwiper2">
-            <div class="swiper-wrapper products_holder"></div>
-            <div class="hide_arrow_btn">
-              <div class="swiper-button-prev swiper_button_prop2"></div>
-            </div>
-            <div class="hide_arrow_btn">
-              <div class="swiper-button-next swiper_button_prop2"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Product Section End -->
+      <!-- Add To Cart Section End -->
     </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer_container_prop">
+          <div class="footer_top">
+            <div class="footer_top_left">
+              <p class="footer_top_left_title">Subscribe Newsletter</p>
+              <p class="footer_top_left_text">
+                Subscribe newsletter to get 5% on all products.
+              </p>
+            </div>
+            <div class="footer_top_middle">
+              <input placeholder="Enter your email" type="email" />
+              <div class="footer_top_middle_btn">Subscribe</div>
+            </div>
+            <div class="header_top_icons footer_top_right">
+              <i class="fab fa-facebook header_top_icons_prop"></i>
+              <i class="fab fa-instagram header_top_icons_prop"></i>
+              <i class="fab fa-youtube header_top_icons_prop"></i>
+            </div>
+          </div>
+
+          <div class="footer_middle">
+            <div class="footer_middle_logo2">
+              <a href="#"></a>
+            </div>
+
+            <div class="footer_middle_center">
+              <h2 class="footer_middle_center_title">Shop Men</h2>
+              <p class="footer_middle_center_text">Clothing Fashion</p>
+              <p class="footer_middle_center_text">Winter</p>
+              <p class="footer_middle_center_text">Summer</p>
+              <p class="footer_middle_center_text">Formal</p>
+              <p class="footer_middle_center_text">Casual</p>
+            </div>
+
+            <div class="footer_middle_center">
+              <h2 class="footer_middle_center_title">Shop Men</h2>
+              <p class="footer_middle_center_text">Clothing Fashion</p>
+              <p class="footer_middle_center_text">Winter</p>
+              <p class="footer_middle_center_text">Summer</p>
+              <p class="footer_middle_center_text">Formal</p>
+              <p class="footer_middle_center_text">Casual</p>
+            </div>
+
+            <div class="footer_middle_center">
+              <h2 class="footer_middle_center_title">Shop Men</h2>
+              <p class="footer_middle_center_text">Clothing Fashion</p>
+              <p class="footer_middle_center_text">Winter</p>
+              <p class="footer_middle_center_text">Summer</p>
+              <p class="footer_middle_center_text">Formal</p>
+              <p class="footer_middle_center_text">Casual</p>
+            </div>
+
+            <div class="footer_middle_center">
+              <h2 class="footer_middle_center_title">Shop Men</h2>
+              <p class="footer_middle_center_text">Clothing Fashion</p>
+              <p class="footer_middle_center_text">Winter</p>
+              <p class="footer_middle_center_text">Summer</p>
+              <p class="footer_middle_center_text">Formal</p>
+              <p class="footer_middle_center_text">Casual</p>
+            </div>
+          </div>
+
+          <div class="footer_bottom">
+            <p>
+              Copyright ©2023 All rights reserved | This template is made by
+              Shahin Sherifzade
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <!-- Slider -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>

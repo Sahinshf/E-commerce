@@ -15,12 +15,14 @@
   html {
     font-size: 9px;
   }
-
-  .header_middle_nav_list li {
+  .header_middle_nav_list li a {
     margin: 0 10px;
   }
   .product_items {
     height: 300px;
+  }
+  .contact_info {
+    margin-left: 6rem;
   }
 }
 
@@ -28,19 +30,15 @@
   .header_top_list_item {
     margin-right: 0;
   }
-
   .header_top_contact {
     @include d-flex(_, space-between, center);
   }
-
   .header_middle_left_menu {
     display: block;
   }
-
   .header_middle_container {
     position: relative;
   }
-
   .header_middle_nav {
     width: 100%;
     background: #fff;
@@ -59,15 +57,12 @@
       }
     }
   }
-
   .header_middle_nav_angle {
     display: none;
   }
-
   .header_middle_nav_right_angle {
     display: block;
   }
-
   .header_middle_nav_pages:hover,
   .header_middle_nav_pages_item {
     clip-path: none;
@@ -75,21 +70,40 @@
   .header_middle_nav_pages_item {
     display: none;
   }
-
   .swiper {
     height: 500px;
   }
-
   .banner_text_container {
     top: 24%;
   }
-
   .banner_text_container_left {
     left: 30%;
   }
-
   .category_item_details {
     height: 26rem;
+  }
+  .get_in_touch_container {
+    flex-direction: column;
+  }
+  .contact_info {
+    margin-top: 20px;
+    margin-left: 0;
+  }
+  .footer_top {
+    @include d-flex(column, center, center);
+    &_left {
+      text-align: center;
+    }
+    &_middle {
+      width: 100%;
+      padding: 20px 0;
+      & input {
+        width: 100%;
+      }
+    }
+  }
+  .contact_form {
+    width: 100%;
   }
 }
 
@@ -97,19 +111,20 @@
   .header_top_container {
     display: block;
   }
-
   .header_top_list {
     display: none;
   }
   .swiper {
     height: 400px;
   }
-
   .banner_text_container_left {
     left: 12%;
   }
   .category_item {
     @include d-flex(column, center, center);
+  }
+  .product_header {
+    @include d-flex(column, flex-start, center);
   }
 }
 
@@ -137,7 +152,42 @@
   }
   .banner_text {
     margin: 0 auto;
+    width: 100%;
     padding-top: 50px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .hide_arrow_btn {
+    display: none;
+  }
+  .header_top_contact ul {
+    display: none;
+  }
+  .header_top_icons {
+    margin: 0 auto;
+  }
+  .header_middle_container {
+    padding: 0;
+    padding-bottom: 10px;
+  }
+  .header_middle_right_icon {
+    margin: 0 8px;
+  }
+  .header_middle_left_menu {
+    padding-right: 10px;
+  }
+  .banner_text {
+    padding-top: 20px;
+    &_info {
+      padding: 0;
+    }
+  }
+  .product_items {
+    height: 400px;
+  }
+  .mySwiper2 {
+    height: auto;
   }
 }
 

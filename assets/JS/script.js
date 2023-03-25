@@ -17,6 +17,35 @@ window.addEventListener("scroll", function () {
 });
 //#endregion
 
+//#region Logo Position
+
+let logo = document.querySelector(".header_middle_logo");
+let logo2 = document.querySelector(".header_middle_logo2");
+
+let headerTop = document.querySelector(".header_top");
+
+//#region
+// window.addEventListener("DOMContentLoaded", () => {
+//   if (
+//     headerTop.getBoundingClientRect().top == 0 &&
+//     this.window.innerWidth < 370
+//   ) {
+//     logo2.classList.remove("display_none_hidden");
+//     logo.classList.add("display_none_hidden");
+//   }
+// });
+//#endregion
+
+window.addEventListener("scroll", function () {
+  if (this.window.scrollY > 33 && this.window.innerWidth < 370) {
+    logo2.classList.remove("header_middle_logo2");
+  } else if (this.window.scrollY < 33 && this.window.innerWidth < 370) {
+    logo2.classList.add("header_middle_logo2");
+  }
+});
+
+//#endregion
+
 //#region Navigation Bar
 
 menuBtn.addEventListener("click", () => {
@@ -63,8 +92,6 @@ const modalRegister = document.querySelector(".user_register");
 const btnCloseModalRegister = document.querySelector(
   ".btn--close-modal_register"
 );
-
-console.log(btnsOpenModal);
 
 const openModal = function () {
   modal.classList.remove("hidden");
@@ -197,10 +224,42 @@ let swiper2 = new Swiper(".mySwiper2", {
 
 //#endregion
 
+//#region You May like section Slide
+let swiper3 = new Swiper(".mySwiper3", {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  pagination: {
+    clickable: true,
+  },
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true,
+  },
+  breakpoints: {
+    992: {
+      slidesPerView: 4,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    450: {
+      slidesPerView: 2,
+    },
+  },
+});
+//#endregion
+
 //#region Add Product to Slide
 const products = [
   {
     id: 1,
+    count: 1,
     productName: "Cashmere Tank + Bag",
     oldPrice: 120.0,
     newPrice: 98.0,
@@ -209,6 +268,7 @@ const products = [
   },
   {
     id: 2,
+    count: 1,
     productName: "Cashmere Tank + Bag",
     oldPrice: 120.0,
     newPrice: 100.0,
@@ -217,6 +277,7 @@ const products = [
   },
   {
     id: 3,
+    count: 1,
     productName: "Cashmere Tank + Bag",
     oldPrice: 120.0,
     newPrice: 25,
@@ -225,6 +286,7 @@ const products = [
   },
   {
     id: 4,
+    count: 1,
     productName: "Cashmere Tank + Bag",
     oldPrice: 120.0,
     newPrice: 98.0,
@@ -233,6 +295,7 @@ const products = [
   },
   {
     id: 5,
+    count: 1,
     productName: "Cashmere Tank + Bag",
     oldPrice: 120.0,
     newPrice: 78.0,
@@ -241,6 +304,7 @@ const products = [
   },
   {
     id: 6,
+    count: 1,
     productName: "Cashmere Tank + Bag",
     oldPrice: 120.0,
     newPrice: 98.0,
@@ -249,6 +313,7 @@ const products = [
   },
   {
     id: 7,
+    count: 1,
     productName: "Cashmere Tank + Bag",
     oldPrice: 120.0,
     newPrice: 98.0,
@@ -257,6 +322,7 @@ const products = [
   },
   {
     id: 8,
+    count: 1,
     productName: "Cashmere Tank + Bag",
     oldPrice: 120.0,
     newPrice: 98.0,
@@ -265,6 +331,7 @@ const products = [
   },
   {
     id: 9,
+    count: 1,
     productName: "Cashmere Tank + Bag",
     oldPrice: 120.0,
     newPrice: 98.0,
@@ -273,11 +340,96 @@ const products = [
   },
 ];
 
+const products2 = [
+  {
+    id: 10,
+    count: 1,
+    productName: "Cashmere Tank + Bag",
+    oldPrice: 123123.0,
+    newPrice: 98.0,
+    productimage: "../assets/Styles/sass/image/homepage/latest1.jpg.webp",
+    category: "women",
+  },
+  {
+    id: 11,
+    count: 1,
+    productName: "Cashmere Tank + Bag",
+    oldPrice: 123123.0,
+    newPrice: 100.0,
+    productimage: "../assets/Styles/sass/image/homepage/latest1.jpg.webp",
+    category: "women",
+  },
+  {
+    id: 12,
+    count: 1,
+    productName: "Cashmere Tank + Bag",
+    oldPrice: 123123.0,
+    newPrice: 25,
+    productimage: "../assets/Styles/sass/image/homepage/latest1.jpg.webp",
+    category: "women",
+  },
+  {
+    id: 13,
+    count: 1,
+    productName: "Cashmere Tank + Bag",
+    oldPrice: 123123.0,
+    newPrice: 98.0,
+    productimage: "../assets/Styles/sass/image/homepage/latest3.jpg.webp",
+    category: "men",
+  },
+  {
+    id: 14,
+    count: 1,
+    productName: "Cashmere Tank + Bag",
+    oldPrice: 120.0,
+    newPrice: 78.0,
+    productimage: "../assets/Styles/sass/image/homepage/latest3.jpg.webp",
+    category: "men",
+  },
+  {
+    id: 15,
+    count: 1,
+    productName: "Cashmere Tank + Bag",
+    oldPrice: 120.0,
+    newPrice: 98.0,
+    productimage: "../assets/Styles/sass/image/homepage/latest3.jpg.webp",
+    category: "men",
+  },
+  {
+    id: 16,
+    count: 1,
+    productName: "Cashmere Tank + Bag",
+    oldPrice: 120.0,
+    newPrice: 98.0,
+    productimage: "../assets/Styles/sass/image/homepage/latest2.jpg.webp",
+    category: "baby",
+  },
+  {
+    id: 17,
+    count: 1,
+    productName: "Cashmere Tank + Bag",
+    oldPrice: 120.0,
+    newPrice: 98.0,
+    productimage: "../assets/Styles/sass/image/homepage/latest2.jpg.webp",
+    category: "baby",
+  },
+  {
+    id: 18,
+    count: 1,
+    productName: "Cashmere Tank + Bag",
+    oldPrice: 120.0,
+    newPrice: 98.0,
+    productimage: "../assets/Styles/sass/image/homepage/latest2.jpg.webp",
+    category: "baby",
+  },
+];
+
+//#region Add Product to slide
 function addProduct() {
   let swiperSlide = document.querySelector(".products_holder");
   for (let i = 0; i < products.length; i++) {
     swiperSlide.innerHTML += `<div class="swiper-slide product_cart ${products[i].category}">
-    <div
+    <div  
       class="product_items"
       style="
         background-image: url(${products[i].productimage});
@@ -304,12 +456,55 @@ function addProduct() {
   swiper2.update();
 }
 addProduct();
+//#endregion
+
+//#region Add Product You May Like Slide
+function addProduct2() {
+  let swiperSlide = document.querySelector(".products_holder2");
+  for (let i = 0; i < products.length; i++) {
+    swiperSlide.innerHTML += `<div class="swiper-slide">
+    <div  
+      class="product_items"
+      style="
+        background-image: url(${products2[i].productimage});
+      "
+    >
+      <div class="product_items_prop">
+      
+          <i class="fa-solid fa-cart-shopping hover_icon_prop add_to_cart2"></i>
+      
+          <i class="fa-regular fa-heart hover_icon_prop"></i>
+      
+          <i
+            class="fa-solid fa-magnifying-glass-plus hover_icon_prop"
+          ></i>
+      </div>
+    </div>
+    <p class="product_text">${products2[i].productName}</p>
+    <div class="product_price">
+      <p class="product_new_price">$${products2[i].newPrice}.00</p>
+      <p class="product_old_price">$${products2[i].oldPrice}.00</p>
+    </div>
+    </div>`;
+  }
+  swiper3.update();
+}
+addProduct2();
+//#endregion
 
 let categoriesBtn = document.querySelectorAll(".category_btn");
 let productCartItem = document.querySelectorAll(".product_cart");
-let addedProduct = [];
+console.log(productCartItem);
+let addedProduct;
+
+if (JSON.parse(localStorage.getItem("added_product")) == null) {
+  addedProduct = [];
+} else {
+  addedProduct = JSON.parse(localStorage.getItem("added_product"));
+}
 
 let addToCartButton = document.querySelectorAll(".add_to_cart");
+let addToCartButton2 = document.querySelectorAll(".add_to_cart2");
 
 categoriesBtn.forEach((button) => {
   button.addEventListener("click", () => {
@@ -330,15 +525,85 @@ categoriesBtn.forEach((button) => {
   });
 });
 
+let basketCount = document.querySelector(".header_middle_right_cart_count");
+let basketProductCount;
+
+if (JSON.parse(localStorage.getItem("Basket Product Count")) == null) {
+  basketProductCount = basketCount.innerHTML;
+} else {
+  basketProductCount = JSON.parse(localStorage.getItem("Basket Product Count"));
+  basketCount.innerHTML = basketProductCount;
+}
+
 addToCartButton.forEach((btn, index) => {
   btn.addEventListener("click", () => {
     const findData = products.find((item) => item.id == index + 1);
-    const hasData = addedProduct.includes(findData);
+    let hasData2;
+    let hasData;
+    if (JSON.parse(localStorage.getItem("added_product")) != null) {
+      let hasDataArr = JSON.parse(localStorage.getItem("added_product"));
+      hasDataArr.forEach((item) => {
+        if (item.id == index + 1) {
+          hasData2 = true;
+        }
+      });
+    } else {
+      hasData = addedProduct.includes(findData);
+    }
 
-    hasData ? addedProduct : addedProduct.push(findData);
+    if (hasData != false && hasData2) {
+      addedProduct;
+    } else {
+      basketProductCount++;
+      localStorage.setItem(
+        "Basket Product Count",
+        JSON.stringify(basketProductCount)
+      );
+      basketCount.innerHTML = JSON.parse(
+        localStorage.getItem("Basket Product Count")
+      );
 
-    console.log(addedProduct);
-    localStorage.setItem("Added Product", JSON.stringify(addedProduct));
+      addedProduct.push(findData);
+      console.log(addedProduct);
+      localStorage.setItem("added_product", JSON.stringify(addedProduct));
+    }
+  });
+});
+
+addToCartButton2.forEach((btn, index) => {
+  btn.addEventListener("click", () => {
+    const findData = products2.find(
+      (item) => item.id == index + 1 + products.length
+    );
+    let hasData2;
+    let hasData;
+    if (JSON.parse(localStorage.getItem("added_product")) != null) {
+      let hasDataArr = JSON.parse(localStorage.getItem("added_product"));
+      hasDataArr.forEach((item) => {
+        if (item.id == index + 1 + products.length) {
+          hasData2 = true;
+        }
+      });
+    } else {
+      hasData = addedProduct.includes(findData);
+    }
+
+    if (hasData != false && hasData2) {
+      addedProduct;
+    } else {
+      basketProductCount++;
+      localStorage.setItem(
+        "Basket Product Count",
+        JSON.stringify(basketProductCount)
+      );
+      basketCount.innerHTML = JSON.parse(
+        localStorage.getItem("Basket Product Count")
+      );
+
+      addedProduct.push(findData);
+      console.log(addedProduct);
+      localStorage.setItem("added_product", JSON.stringify(addedProduct));
+    }
   });
 });
 

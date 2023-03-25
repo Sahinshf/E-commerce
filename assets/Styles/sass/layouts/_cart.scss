@@ -2,22 +2,10 @@
 @import "../abstracts/variable";
 
 // Add To Cart Section Start
-.first_column {
-  width: 56%;
-}
-tbody {
-  font-family: "Jost", sans-serif;
-  color: #301a22;
-  font-size: 1.6rem;
-  line-height: 30px;
-  margin-bottom: 15px;
-  font-weight: 400;
-  line-height: 1.6;
-}
-tbody tr {
-  border-bottom: 1px rgba(128, 128, 128, 0.197) solid;
-}
 .cart {
+  margin: 20px 0;
+  position: relative;
+  top: -50px;
   &_container_prop {
     display: flex;
   }
@@ -48,13 +36,15 @@ tbody tr {
     &_image {
       @include d-flex(_, flex-start, center);
       &_item {
-        background-image: url("/assets/Styles/sass/image/homepage/latest1.jpg.webp");
-        width: 120px;
-        height: 120px;
+        // background-image: url("/assets/Styles/sass/image/homepage/latest1.jpg.webp");
+        width: 116px;
+        height: 116px;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         margin: 16px 0;
+        border: none;
+        border-radius: 20px;
       }
 
       &_title {
@@ -77,6 +67,21 @@ tbody tr {
     }
   }
 }
+.first_column {
+  width: 56%;
+}
+tbody {
+  font-family: "Jost", sans-serif;
+  color: #301a22;
+  font-size: 1.6rem;
+  line-height: 30px;
+  margin-bottom: 15px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+tbody tr {
+  border-bottom: 1px rgba(128, 128, 128, 0.197) solid;
+}
 .align_item {
   display: table-cell;
   text-align: center;
@@ -88,14 +93,12 @@ tbody tr {
     background: #ff2020;
     font-family: "Jost", sans-serif;
     text-transform: inherit;
-    padding: 22px 32px;
+    padding: 22px 40px;
     color: #fff;
-    cursor: pointer;
     display: inline-block;
     font-size: 16px;
     font-weight: 500;
     border-radius: 35px;
-    line-height: 1;
     line-height: 0;
     cursor: pointer;
   }
@@ -143,9 +146,18 @@ tbody tr {
   }
 
   &_total {
-    @include d-flex(_, space-between, center);
+    @include d-flex(_, space-between, flex-end);
+    &_title {
+      font-weight: 500;
+    }
   }
 }
+
+.total_price {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
 // Submit End
 
 // Footer Start
@@ -153,6 +165,13 @@ tbody tr {
   font-size: 1.6rem;
   color: #fff;
   background-color: #171613;
+
+  &_container {
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
 
   &_container_prop {
     padding-top: 60px;
@@ -210,6 +229,8 @@ tbody tr {
 
   &_middle {
     @include d-flex(_, space-between, flex-start);
+    flex-wrap: wrap;
+    gap: 40px;
     padding-top: 63px;
     padding-bottom: 60px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.14);
@@ -262,5 +283,13 @@ tbody tr {
       margin-bottom: 15px;
     }
   }
+}
+
+.cart_table_quantity_item {
+  font-size: 1.7rem;
+}
+.increase_product,
+.decrease_product {
+  cursor: pointer;
 }
 // Footer End

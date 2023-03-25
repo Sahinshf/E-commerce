@@ -66,6 +66,9 @@
       <section class="header_middle">
         <div class="header_fixed">
           <div class="container">
+            <div class="header_middle_logo2">
+              <a href="#"></a>
+            </div>
             <div class="header_middle_container">
               <div class="header_middle_left">
                 <div class="header_middle_left_menu">
@@ -235,7 +238,7 @@
                 class="modal_form_password_input"
                 placeholder="Enter Password"
                 type="password"
-                id="userPassword"
+                id="userPasswordRegister"
               />
             </div>
 
@@ -292,7 +295,7 @@
 
       <!-- Add To Cart Section Start -->
       <section class="cart">
-        <div class="container">
+        <div class="cart_container">
           <div class="cart_container_prop">
             <div>
               <table class="cart_table">
@@ -307,7 +310,7 @@
                   </tr>
                 </thead>
                 <tbody class="table_body">
-                  <tr>
+                  <!-- <tr>
                     <td class="cart_table_image">
                       <div class="cart_table_image_item"></div>
                       <p class="cart_table_image_title">
@@ -322,12 +325,17 @@
                         <i class="fa-solid fa-plus increase_product"></i>
                       </div>
                     </td>
-                    <td class="cart_table_total align_item">150$</td>
-                  </tr>
+                    <td class="cart_table_total align_item">
+                      150<span>$</span>
+                    </td>
+                  </tr> -->
 
-                  <tr>
+                  <!-- <tr>
                     <td class="cart_table_image">
-                      <div class="cart_table_image_item"></div>
+                      <div
+                        class="cart_table_image_item"
+                        id="`table_row${id}`"
+                      ></div>
                       <p class="cart_table_image_title">
                         Lorem, ipsum dolor sit amet
                       </p>
@@ -341,88 +349,96 @@
                       </div>
                     </td>
                     <td class="cart_table_total align_item">150$</td>
-                  </tr>
+                  </tr> -->
                 </tbody>
               </table>
 
               <div class="cart_prop">
-                <div class="cart_prop_btn">Update Cart</div>
-                <div class="cart_prop_btn">Close Coupon</div>
+                <div class="cart_prop_btn cart_prop_btn1">Update Cart</div>
+                <div class="cart_prop_btn cart_prop_btn1">Close Coupon</div>
               </div>
             </div>
 
             <div class="submit_product">
-              <h1>Summary</h1>
-              <div class="submit_product_shipping">
-                <div>
-                  <input
-                    type="radio"
-                    id="shipping_radio1"
-                    name="radio_btn_shipping"
-                    value="30"
-                  />
-                  <label for="shipping_radio1">Free Shipping </label><br />
-                </div>
+              <div>
+                <h1>Summary</h1>
+                <div class="submit_product_shipping">
+                  <div>
+                    <input
+                      type="radio"
+                      id="shipping_radio1"
+                      name="radio_btn_shipping"
+                      value="30"
+                    />
+                    <label for="shipping_radio1">Free Shipping </label><br />
+                  </div>
 
-                <div>
-                  <input
-                    type="radio"
-                    id="shipping_radio4"
-                    name="radio_btn_shipping"
-                    value="30"
-                  />
-                  <label for="shipping_radio4">Local Delivery: $2.00 </label
-                  ><br />
-                </div>
+                  <div>
+                    <input
+                      type="radio"
+                      id="shipping_radio4"
+                      name="radio_btn_shipping"
+                      value="30"
+                    />
+                    <label for="shipping_radio4">Local Delivery: $2.00 </label
+                    ><br />
+                  </div>
 
-                <div>
-                  <input
-                    type="radio"
-                    id="shipping_radio2"
-                    name="radio_btn_shipping"
-                    value="60"
-                  />
-                  <label for="shipping_radio2">Flat Rate: $5.00 </label><br />
-                </div>
+                  <div>
+                    <input
+                      type="radio"
+                      id="shipping_radio2"
+                      name="radio_btn_shipping"
+                      value="60"
+                    />
+                    <label for="shipping_radio2">Flat Rate: $5.00 </label><br />
+                  </div>
 
-                <div>
-                  <input
-                    type="radio"
-                    id="shipping_radio3"
-                    name="radio_btn_shipping"
-                    value="100"
-                  />
-                  <label for="shipping_radio3">Flat Rate: $10.00 </label
-                  ><br /><br />
+                  <div>
+                    <input
+                      type="radio"
+                      id="shipping_radio3"
+                      name="radio_btn_shipping"
+                      value="100"
+                    />
+                    <label for="shipping_radio3">Flat Rate: $10.00 </label
+                    ><br /><br />
+                  </div>
                 </div>
               </div>
 
-              <select class="submit_product_delivery_country">
-                <option value="azerbaijan">Azerbaijan</option>
-                <option value="argentina">Argentina</option>
-                <option value="brazil">Brazil</option>
-                <option value="peru">Peru</option>
-              </select>
+              <div class="select_btn">
+                <select class="submit_product_delivery_country">
+                  <option value="azerbaijan">Azerbaijan</option>
+                  <option value="argentina">Argentina</option>
+                  <option value="brazil">Brazil</option>
+                  <option value="peru">Peru</option>
+                </select>
 
-              <select class="submit_product_delivery_state">
-                <option value="state">Select a State</option>
-                <option value="state">Select a State</option>
-                <option value="state">Select a State</option>
-                <option value="state">Select a State</option>
-              </select>
+                <select class="submit_product_delivery_state">
+                  <option value="state">Select a State</option>
+                  <option value="state">Select a State</option>
+                  <option value="state">Select a State</option>
+                  <option value="state">Select a State</option>
+                </select>
 
-              <input
-                placeholder="Postcode/Zipcode"
-                class="submit_product_promocode"
-                type="text"
-              />
-
-              <div class="submit_product_total">
-                <p class="submit_product_total_title">Total</p>
-                <div class="total_price">0</div>
+                <input
+                  placeholder="Postcode/Zipcode"
+                  class="submit_product_promocode"
+                  type="text"
+                />
               </div>
-              <div class="cart_prop_btn cart_prop_btn_center">
-                Update Details
+
+              <div style="width: 184px">
+                <div class="submit_product_total">
+                  <h1 class="submit_product_total_title">Total</h1>
+                  <div class="total_price">100</div>
+                </div>
+                <div
+                  class="cart_prop_btn cart_prop_btn_center cart_prop_btn_submit"
+                >
+                  Update Details
+                </div>
               </div>
             </div>
           </div>
@@ -431,8 +447,9 @@
       <!-- Add To Cart Section End -->
     </main>
 
+    <!-- Footer Section Start -->
     <footer class="footer">
-      <div class="container">
+      <div class="footer_container">
         <div class="footer_container_prop">
           <div class="footer_top">
             <div class="footer_top_left">
@@ -503,9 +520,12 @@
         </div>
       </div>
     </footer>
+    <!-- Footer Section End-->
+
 
     <!-- Slider -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="assets/JS/script.js"></script>
+    <script src="assets/JS/cart.js"></script>
   </body>
 </html>

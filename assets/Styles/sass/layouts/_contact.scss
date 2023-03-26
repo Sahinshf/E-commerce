@@ -83,12 +83,15 @@
   }
   &_inputs {
     @include d-flex(_, space-between, center);
-    width: 100%;
+    width: 98%;
+    &_item {
+      width: 46%;
+    }
   }
   & input {
     border: 1px solid #e5e6e9;
     background: transparent;
-    width: 44%;
+    width: 100%;
   }
   &_subj {
     margin-top: 30px;
@@ -131,3 +134,8 @@
   }
 }
 // Get İn Touch Section End
+
+.warning_msg {
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+}

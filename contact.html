@@ -314,20 +314,36 @@
         <div class="container">
           <div class="get_in_touch_container">
             <div class="contact_form">
-              <form>
+              <form onsubmit="event.preventDefault();">
                 <textarea
                   placeholder="Enter Message"
                   class="contact_form_mess"
                 ></textarea>
+                <p class="contact_form_mess_warning warning_msg"></p>
                 <div class="contact_form_inputs">
-                  <input placeholder="Enter Your Name" type="text" />
-                  <input placeholder="Enter Email Address" type="email" />
+                  <div class="contact_form_inputs_item">
+                    <input
+                      class="contact_form_name"
+                      placeholder="Enter Your Name"
+                      type="text"
+                    />
+                    <p class="contact_form_name_warning warning_msg"></p>
+                  </div>
+                  <div class="contact_form_inputs_item">
+                    <input
+                      class="contact_form_email"
+                      placeholder="Enter Email Address"
+                      type="email"
+                    />
+                    <p class="contact_form_email_warning warning_msg"></p>
+                  </div>
                 </div>
                 <textarea
                   placeholder="Enter Subject"
                   class="contact_form_subj"
                 ></textarea>
-                <div class="contact_form_send">Send</div>
+                <p class="contact_form_subj_warning warning_msg"></p>
+                <button class="contact_form_send">Send</button>
               </form>
             </div>
             <div class="contact_info">
@@ -439,5 +455,6 @@
     <!-- Slider -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="assets/JS/script.js"></script>
+    <script src="assets/JS/contact.js"></script>
   </body>
 </html>

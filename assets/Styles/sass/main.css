@@ -354,7 +354,7 @@ button {
 }
 .header_middle .search_box {
   position: relative;
-  z-index: 999;
+  z-index: 300;
   margin-top: 10px;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
           clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
@@ -1111,12 +1111,15 @@ button {
   flex-direction: _;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 98%;
+}
+.contact_form_inputs_item {
+  width: 46%;
 }
 .contact_form input {
   border: 1px solid #e5e6e9;
   background: transparent;
-  width: 44%;
+  width: 100%;
 }
 .contact_form_subj {
   margin-top: 30px;
@@ -1155,6 +1158,11 @@ button {
   font-size: 3rem;
   width: 50px;
   padding-right: 16px;
+}
+
+.warning_msg {
+  font-size: 1.4rem;
+  margin-bottom: 5px;
 }
 
 .cart {

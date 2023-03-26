@@ -141,7 +141,7 @@ overlay.addEventListener("click", () => {
 //#endregion
 //#endregion
 
-// #region Banner Slider
+//#region Banner Slider
 let swiper = new Swiper(".mySwiper", {
   spaceBetween: 30,
   centeredSlides: true,

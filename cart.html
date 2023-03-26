@@ -66,7 +66,7 @@
       <section class="header_middle">
         <div class="header_fixed">
           <div class="container">
-            <div class="header_middle_logo2">
+            <div class="header_middle_logo2 display_none_hidden">
               <a href="#"></a>
             </div>
             <div class="header_middle_container">
@@ -160,7 +160,7 @@
             <p>Enter Login details to get access</p>
           </div>
 
-          <form class="modal_form">
+          <form class="modal_form" onsubmit="event.preventDefault();">
             <div class="modal_form_username">
               <label for="userName">Username Or Email Address</label>
               <input
@@ -169,6 +169,7 @@
                 type="text"
                 id="userName"
               />
+              <p class="email_login_warning register_warn_msg"></p>
             </div>
 
             <div class="modal_form_password">
@@ -179,6 +180,7 @@
                 type="password"
                 id="userPassword"
               />
+              <p class="password_login_warning register_warn_msg"></p>
             </div>
           </form>
 
@@ -196,7 +198,7 @@
               Don’t have an account?
               <span> <a class="path_register" href="#">Sign Up</a> </span> here
             </p>
-            <p class="modal_submit_login">Login</p>
+            <button class="modal_submit_login">Login</button>
           </div>
         </div>
 
@@ -211,7 +213,7 @@
             <p>Create your account to get full access</p>
           </div>
 
-          <form class="modal_form">
+          <form class="modal_form" onsubmit="event.preventDefault();">
             <div class="modal_form_username">
               <label for="userRegisterName">Full Name</label>
               <input
@@ -220,6 +222,7 @@
                 type="text"
                 id="userRegisterName"
               />
+              <p class="username_register_warning register_warn_msg"></p>
             </div>
 
             <div class="modal_form_email">
@@ -228,18 +231,26 @@
                 class="modal_form_email_input"
                 placeholder="Enter Email Address"
                 type="text"
-                id="userRegistreMail"
+                id="userRegisterMail"
               />
+              <p class="useremail_register_warning register_warn_msg"></p>
             </div>
 
             <div class="modal_form_password">
-              <label for="userPassword">Password</label>
+              <label for="userPassword"
+                >Password
+                <div>
+                  min 8 letter password, with at least a symbol, upper and lower
+                  case letters and a number
+                </div></label
+              >
               <input
                 class="modal_form_password_input"
                 placeholder="Enter Password"
                 type="password"
                 id="userPasswordRegister"
               />
+              <p class="userpassword_register_warning register_warn_msg"></p>
             </div>
 
             <div class="modal_form_password">
@@ -251,6 +262,7 @@
                 id="userRegisterConPassword"
               />
             </div>
+            <p class="user_cpassword_register_warning register_warn_msg"></p>
           </form>
 
           <div class="modal_submit">
@@ -258,7 +270,7 @@
               Already have an account?
               <span> <a class="login_path" href="#">Login here</a> </span>
             </p>
-            <p class="modal_submit_login">Sign Up</p>
+            <div class="modal_submit_login" id="signUp">Sign Up</div>
           </div>
         </div>
 
@@ -521,7 +533,6 @@
       </div>
     </footer>
     <!-- Footer Section End-->
-
 
     <!-- Slider -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>

@@ -466,7 +466,7 @@ button {
   background-color: rgba(0, 0, 0, 0.5);
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
-  z-index: 100;
+  z-index: 999;
   transition: all 0.5s;
 }
 
@@ -513,6 +513,10 @@ button {
   align-items: flex-start;
   padding-top: 1.2rem;
 }
+.modal_form_password div {
+  font-size: 1.2rem;
+  overflow: hidden;
+}
 .modal_form_password label {
   font-style: 1.7rem;
   font-weight: 500;
@@ -551,6 +555,12 @@ button {
   padding: 10px;
   border: 1px rgba(128, 128, 128, 0.19) solid;
   margin-top: 10px;
+}
+
+.register_warn_msg {
+  opacity: 0;
+  color: #ff2020;
+  transition: all 0.4s ease-in;
 }
 
 .modal {
@@ -871,9 +881,97 @@ button {
 }
 
 .customer {
-  height: 400px;
   background-color: #f3ead8;
   margin-bottom: 100px;
+  padding: 6rem 0;
+}
+
+.customer_container {
+  position: relative;
+}
+
+.container-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+}
+
+.slider-wrapper {
+  width: 60rem;
+  overflow: hidden;
+}
+
+.inner-wrapper {
+  width: 200%;
+  position: relative;
+  left: -100%;
+}
+
+.slide {
+  width: 50%;
+  float: right;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slide_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.slide_item p {
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 3.2rem;
+  font-size: 2.2rem;
+  color: #292621;
+  font-weight: 400;
+}
+.slide_item h1 {
+  font-size: 3.4rem;
+  font-weight: 500;
+  padding: 10px 0;
+  color: #292621;
+}
+.slide_item_img {
+  width: 65px;
+  height: 65px;
+  background-image: url("/assets/Styles/sass/image/homepage/founde.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.slide_content {
+  display: flex;
+  margin-top: 20px;
+}
+.slide_content_text {
+  margin-left: 10px;
+}
+
+.button {
+  top: 50%;
+  font-size: 2.4rem;
+  color: rgba(41, 38, 33, 0.3);
+  position: absolute;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+}
+
+.customer_slide {
+  display: flex;
+  align-items: center;
+}
+
+.prev {
+  left: 10%;
+}
+
+.next {
+  right: 10%;
 }
 
 .may_like {
@@ -1472,6 +1570,12 @@ tbody tr {
   .contact_info {
     margin-left: 6rem;
   }
+  .prev {
+    left: 8%;
+  }
+  .next {
+    right: 8%;
+  }
 }
 @media screen and (max-width: 992px) {
   .header_top_list_item {
@@ -1632,9 +1736,6 @@ tbody tr {
   .modal_form_email_input {
     width: 30rem;
   }
-  .swiper {
-    height: 360px;
-  }
   .banner_text_container {
     position: static;
   }
@@ -1722,10 +1823,17 @@ tbody tr {
   .submit_product {
     flex-direction: column;
   }
+  .prev {
+    left: 4%;
+  }
+  .next {
+    right: 4%;
+  }
 }
 .container,
 .container_text,
-.cart_container {
+.cart_container,
+.customer_container {
   width: 100%;
   margin: 0 auto;
   padding: 0 15px;
@@ -1738,10 +1846,16 @@ tbody tr {
   .cart_container {
     max-width: 100%;
   }
+  .button {
+    top: 70%;
+  }
 }
 @media screen and (min-width: 450px) {
   .container {
     max-width: 90%;
+  }
+  .button {
+    top: 60%;
   }
 }
 @media screen and (min-width: 576px) {
@@ -1751,16 +1865,25 @@ tbody tr {
   .cart_container {
     max-width: 90%;
   }
+  .customer_container {
+    max-width: 100%;
+  }
 }
 @media screen and (min-width: 768px) {
   .container {
     max-width: 720px;
+  }
+  .customer_container {
+    max-width: 800px;
   }
 }
 @media screen and (min-width: 992px) {
   .container,
   .cart_container {
     max-width: 960px;
+  }
+  .customer_container {
+    max-width: 800px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1769,12 +1892,18 @@ tbody tr {
   .cart_container {
     max-width: 1140px;
   }
+  .customer_container {
+    max-width: 1000px;
+  }
 }
 @media screen and (min-width: 1400px) {
   .container,
   .container_text,
   .cart_container {
     max-width: 1320px;
+  }
+  .customer_container {
+    max-width: 1000px;
   }
 }
 .display_none_hidden {

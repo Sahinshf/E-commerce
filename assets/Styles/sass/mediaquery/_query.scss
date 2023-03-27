@@ -111,7 +111,6 @@
   .contact_form {
     width: 100%;
   }
-
   .cart_container_prop {
     flex-direction: column;
   }
@@ -184,9 +183,6 @@
   .modal_form_email_input {
     width: 30rem;
   }
-  // .swiper {
-  //   height: 360px;
-  // }
   .banner_text_container {
     position: static;
   }
@@ -202,6 +198,14 @@
     display: none;
   }
   .blog_item {
+    width: 100%;
+  }
+  .bottom_info_container {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 30px;
+  }
+  .bottom_info_item {
     width: 100%;
   }
 }
@@ -239,7 +243,9 @@
       padding: 0;
     }
   }
-
+  .product_items {
+    height: 440px;
+  }
   .mySwiper2 {
     height: auto;
   }

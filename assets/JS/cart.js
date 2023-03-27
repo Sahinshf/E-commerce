@@ -161,7 +161,7 @@ window.addEventListener("DOMContentLoaded", () => {
         "registered_user",
         JSON.stringify(registeredUserArr)
       );
-      // window.location.href = "index.html";
+      // window.location.src = "index.html";
     } else {
       console.log("false");
     }

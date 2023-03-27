@@ -286,7 +286,7 @@ const products = [
     productName: "Cashmere Tank + Bag",
     oldPrice: 120.0,
     newPrice: 98.0,
-    productimage: "../assets/Styles/sass/image/homepage/items11.jpg.webp",
+    productimage: "./assets/Styles/sass/image/homepage/items11.jpg.webp",
     category: "men",
   },
   {
@@ -295,7 +295,7 @@ const products = [
     productName: "Cashmere Tank + Bag",
     oldPrice: 120.0,
     newPrice: 100.0,
-    productimage: "../assets/Styles/sass/image/homepage/latest3.jpg.webp",
+    productimage: "./assets/Styles/sass/image/homepage/latest3.jpg.webp",
     category: "women",
   },
   {
@@ -304,7 +304,7 @@ const products = [
     productName: "Cashmere Tank + Bag",
     oldPrice: 120.0,
     newPrice: 25,
-    productimage: "../assets/Styles/sass/image/homepage/latest12.jpg.webp",
+    productimage: "./assets/Styles/sass/image/homepage/latest12.jpg.webp",
     category: "baby",
   },
   {
@@ -314,7 +314,7 @@ const products = [
     oldPrice: 120.0,
     newPrice: 98.0,
 
-    productimage: "../assets/Styles/sass/image/homepage/items12.jpg.webp",
+    productimage: "./assets/Styles/sass/image/homepage/items12.jpg.webp",
     category: "men",
   },
   {
@@ -323,7 +323,7 @@ const products = [
     productName: "Cashmere Tank + Bag",
     oldPrice: 120.0,
     newPrice: 78.0,
-    productimage: "../assets/Styles/sass/image/homepage/latest4.jpg.webp",
+    productimage: "./assets/Styles/sass/image/homepage/latest4.jpg.webp",
     category: "women",
   },
   {
@@ -332,7 +332,7 @@ const products = [
     productName: "Cashmere Tank + Bag",
     oldPrice: 120.0,
     newPrice: 98.0,
-    productimage: "../assets/Styles/sass/image/homepage/latest11.jpg.webp",
+    productimage: "./assets/Styles/sass/image/homepage/latest11.jpg.webp",
     category: "baby",
   },
   {
@@ -342,7 +342,7 @@ const products = [
     oldPrice: 120.0,
     newPrice: 98.0,
 
-    productimage: "../assets/Styles/sass/image/homepage/items10.jpg.webp",
+    productimage: "./assets/Styles/sass/image/homepage/items10.jpg.webp",
     category: "men",
   },
   {
@@ -351,7 +351,7 @@ const products = [
     productName: "Cashmere Tank + Bag",
     oldPrice: 120.0,
     newPrice: 98.0,
-    productimage: "../assets/Styles/sass/image/homepage/latest2.jpg.webp",
+    productimage: "./assets/Styles/sass/image/homepage/latest2.jpg.webp",
     category: "women",
   },
   {
@@ -360,7 +360,7 @@ const products = [
     productName: "Cashmere Tank + Bag",
     oldPrice: 120.0,
     newPrice: 98.0,
-    productimage: "../assets/Styles/sass/image/homepage/latest13.jpg.webp",
+    productimage: "./assets/Styles/sass/image/homepage/latest13.jpg.webp",
     category: "baby",
   },
 ];
@@ -372,7 +372,7 @@ const products2 = [
     productName: "Cashmere Tank + Bag",
     oldPrice: 120.0,
     newPrice: 98.0,
-    productimage: "../assets/Styles/sass/image/homepage/latest6.jpg.webp",
+    productimage: "./assets/Styles/sass/image/homepage/latest6.jpg.webp",
     category: "women",
   },
   {
@@ -381,7 +381,7 @@ const products2 = [
     productName: "Cashmere Tank + Bag",
     oldPrice: 130.0,
     newPrice: 100.0,
-    productimage: "../assets/Styles/sass/image/homepage/latest7.jpg.webp",
+    productimage: "./assets/Styles/sass/image/homepage/latest7.jpg.webp",
     category: "women",
   },
   {
@@ -390,7 +390,7 @@ const products2 = [
     productName: "Cashmere Tank + Bag",
     oldPrice: 140.0,
     newPrice: 25,
-    productimage: "../assets/Styles/sass/image/homepage/latest5.jpg.webp",
+    productimage: "./assets/Styles/sass/image/homepage/latest5.jpg.webp",
     category: "women",
   },
   {
@@ -399,7 +399,7 @@ const products2 = [
     productName: "Cashmere Tank + Bag",
     oldPrice: 123123.0,
     newPrice: 98.0,
-    productimage: "../assets/Styles/sass/image/homepage/latest8.jpg.webp",
+    productimage: "./assets/Styles/sass/image/homepage/latest8.jpg.webp",
     category: "men",
   },
   {
@@ -408,7 +408,7 @@ const products2 = [
     productName: "Cashmere Tank + Bag",
     oldPrice: 120.0,
     newPrice: 78.0,
-    productimage: "../assets/Styles/sass/image/homepage/latest6.jpg.webp",
+    productimage: "./assets/Styles/sass/image/homepage/latest6.jpg.webp",
     category: "men",
   },
   {
@@ -417,7 +417,7 @@ const products2 = [
     productName: "Cashmere Tank + Bag",
     oldPrice: 120.0,
     newPrice: 98.0,
-    productimage: "../assets/Styles/sass/image/homepage/latest7.jpg.webp",
+    productimage: "./assets/Styles/sass/image/homepage/latest7.jpg.webp",
     category: "men",
   },
   {
@@ -426,7 +426,7 @@ const products2 = [
     productName: "Cashmere Tank + Bag",
     oldPrice: 120.0,
     newPrice: 98.0,
-    productimage: "../assets/Styles/sass/image/homepage/latest5.jpg.webp",
+    productimage: "./assets/Styles/sass/image/homepage/latest5.jpg.webp",
     category: "baby",
   },
   {
@@ -435,7 +435,7 @@ const products2 = [
     productName: "Cashmere Tank + Bag",
     oldPrice: 120.0,
     newPrice: 98.0,
-    productimage: "../assets/Styles/sass/image/homepage/latest8.jpg.webp",
+    productimage: "./assets/Styles/sass/image/homepage/latest8.jpg.webp",
     category: "baby",
   },
   {
@@ -444,7 +444,7 @@ const products2 = [
     productName: "Cashmere Tank + Bag",
     oldPrice: 120.0,
     newPrice: 98.0,
-    productimage: "../assets/Styles/sass/image/homepage/latest6.jpg.webp",
+    productimage: "./assets/Styles/sass/image/homepage/latest6.jpg.webp",
     category: "baby",
   },
 ];

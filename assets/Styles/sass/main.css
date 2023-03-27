@@ -1033,13 +1033,13 @@ button {
   margin-bottom: 25px;
 }
 .blog_item_img1 {
-  background-image: url("./assets/Styles/sass/image/homepage/blog1.jpg.webp");
+  background-image: url("./image/homepage/blog1.jpg.webp");
 }
 .blog_item_img2 {
-  background-image: url("./assets/Styles/sass/image/homepage/blog2.jpg.webp");
+  background-image: url("./image/homepage/blog2.jpg.webp");
 }
 .blog_item_img3 {
-  background-image: url("./assets/Styles/sass/image/homepage/blog3.jpg.webp");
+  background-image: url("./image/homepage/blog3.jpg.webp");
 }
 .blog_item_tag {
   font-weight: normal;
@@ -1094,16 +1094,16 @@ button {
   margin-bottom: 2.6rem;
 }
 .bottom_info_item_img1 {
-  background-image: url(./assets/Styles/sass/image/homepage/services1.svg);
+  background-image: url(./image/homepage/services1.svg);
 }
 .bottom_info_item_img2 {
-  background-image: url(./assets/Styles/sass/image/homepage/services2.svg);
+  background-image: url(./image/homepage/services2.svg);
 }
 .bottom_info_item_img3 {
-  background-image: url(./assets/Styles/sass/image/homepage/services3.svg);
+  background-image: url(./image/homepage/services3.svg);
 }
 .bottom_info_item_img4 {
-  background-image: url(./assets/Styles/sass/image/homepage/services4.svg);
+  background-image: url(./image/homepage/services4.svg);
 }
 .bottom_info_item_content {
   text-align: center;

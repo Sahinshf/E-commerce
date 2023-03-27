@@ -457,7 +457,7 @@ function addProduct() {
     <div  
       class="product_items"
       style="
-        background-image: url(${products[i].productimage});
+        background-image: url(${products[i].productimage}); 
       "
     >
       <div class="product_items_prop">

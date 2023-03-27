@@ -939,7 +939,7 @@ button {
 .slide_item_img {
   width: 65px;
   height: 65px;
-  background-image: url("./assets/Styles/sass/image/homepage/founde.webp");
+  background-image: url("./image/homepage/founde.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

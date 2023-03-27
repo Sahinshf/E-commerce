@@ -397,7 +397,7 @@ const products2 = [
     id: 13,
     count: 1,
     productName: "Cashmere Tank + Bag",
-    oldPrice: 123123.0,
+    oldPrice: 99.0,
     newPrice: 98.0,
     productimage: "./assets/Styles/sass/image/homepage/latest8.jpg.webp",
     category: "men",

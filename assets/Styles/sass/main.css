@@ -1786,9 +1786,6 @@ tbody tr {
   .banner_text_info {
     padding: 0;
   }
-  .product_items {
-    height: 400px;
-  }
   .mySwiper2 {
     height: auto;
   }
@@ -1905,7 +1902,4 @@ tbody tr {
   .customer_container {
     max-width: 1000px;
   }
-}
-.display_none_hidden {
-  display: none;
 }/*# sourceMappingURL=main.css.map */

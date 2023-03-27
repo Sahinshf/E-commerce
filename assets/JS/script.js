@@ -86,6 +86,7 @@ const modal = document.querySelector(".login_user");
 const overlay = document.querySelector(".overlay");
 const btnCloseModal = document.querySelector(".btn--close-modal");
 const btnsOpenModal = document.querySelector(".btn--show-modal");
+const loginİnPages = document.querySelector(".login_path");
 const loginPath = document.querySelector(".login_path");
 
 const modalRegister = document.querySelector(".user_register");
@@ -104,6 +105,7 @@ const closeModal = function () {
 };
 
 btnsOpenModal.addEventListener("click", openModal);
+loginİnPages.addEventListener("click", openModal);
 
 btnCloseModal.addEventListener("click", closeModal);
 overlay.addEventListener("click", closeModal);
@@ -681,12 +683,4 @@ addToCartButton2.forEach((btn, index) => {
 //   </div>
 //   </div>`);
 // }
-//#endregion
-
-//#region Scroll Top
-let scrollTop = document.querySelector(".scrollToTop");
-
-scrollTop.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
 //#endregion

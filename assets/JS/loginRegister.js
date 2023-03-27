@@ -21,7 +21,7 @@ signUp.addEventListener("click", () => {
   );
 
   function fullNameRegisterWarnMsg() {
-    let nameRegex = /^[a-zA-Z\-]+$/;
+    var nameRegex = new RegExp(/^[a-z,',-]+(\s)[a-z,',-]+$/i);
     if (
       nameRegister.value.length == 0 ||
       !nameRegister.value.match(nameRegex)
@@ -262,4 +262,12 @@ signIn.addEventListener("click", () => {
   }
 });
 
+//#endregion
+
+//#region Scroll Top
+let scrollTop = document.querySelector(".scrollToTop");
+
+scrollTop.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
 //#endregion

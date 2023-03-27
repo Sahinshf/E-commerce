@@ -1584,6 +1584,27 @@ tbody tr {
   cursor: pointer;
 }
 
+.empty_cart {
+  padding: 60px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.empty_cart p {
+  font-size: 6rem;
+  padding: 10px 0;
+  color: #d5cdbc;
+}
+.empty_cart button {
+  font-size: 2rem;
+  background-color: #ff2020;
+  color: white;
+  padding: 16px 10px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
 .header_middle_left_menu {
   display: none;
 }
@@ -1803,6 +1824,12 @@ tbody tr {
   }
   .bottom_info_item {
     width: 100%;
+  }
+  .empty_cart p {
+    font-size: 4rem;
+  }
+  .empty_cart button {
+    font-size: 1.6rem;
   }
 }
 @media screen and (max-width: 500px) {

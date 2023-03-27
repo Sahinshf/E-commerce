@@ -293,3 +293,25 @@ tbody tr {
   cursor: pointer;
 }
 // Footer End
+
+// Empty start
+
+.empty_cart {
+  padding: 60px 0;
+  @include d-flex(column, center, center);
+  & p {
+    font-size: 6rem;
+    padding: 10px 0;
+    color: #d5cdbc;
+  }
+
+  & button {
+    font-size: 2rem;
+    background-color: #ff2020;
+    color: white;
+    padding: 16px 10px;
+    border-radius: 20px;
+    font-weight: 600;
+  }
+}
+// Empty end

@@ -208,6 +208,14 @@
   .bottom_info_item {
     width: 100%;
   }
+  .empty_cart {
+    & p {
+      font-size: 4rem;
+    }
+    & button {
+      font-size: 1.6rem;
+    }
+  }
 }
 
 @media screen and (max-width: 500px) {

@@ -5,6 +5,12 @@ window.addEventListener("DOMContentLoaded", () => {
     );
     basketUpdatedCount.innerHTML = 0;
   }
+  let productInBasket = JSON.parse(localStorage.getItem("added_product"));
+
+  if (productInBasket.length == 0) {
+    let hiddenBtn = document.querySelector(".cart_prop");
+    hiddenBtn.classList.add("display_hidden_msg");
+  }
 });
 
 let tableBody = document.querySelector(".table_body");

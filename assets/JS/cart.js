@@ -38,7 +38,8 @@ function addCartProd() {
     hiddenBtn.classList.remove("display_none_msg");
     emptyCart.classList.add("display_none_msg");
   }
-  // console.log(basketUpdatedCount.innerHTML);
+
+  let productPrice;
 
   tableBody.innerHTML = "";
   productInBasket.forEach((item) => {
@@ -64,9 +65,9 @@ function addCartProd() {
         }$</td>
         </tr>`;
 
-    total.innerHTML = `${
-      Number(total.innerHTML.slice(0, -1)) + item.newPrice * item.count
-    }$`;
+    productPrice =
+      Number(total.innerHTML.slice(0, -1)) + item.newPrice * item.count;
+    total.innerHTML = `${productPrice}$`;
   });
 
   let tableRow = document.querySelectorAll(".table_row");
@@ -92,7 +93,6 @@ function addCartProd() {
         Number(priceProduct.innerHTML.slice(0, -1)) *
         Number(quantityProduct.innerHTML)
       }$`;
-      // console.log(totalProductPrice.innerHTML);
 
       prodArr.forEach((item) => {
         if (quantityProduct.classList.contains(`id${item.id}`)) {
@@ -151,3 +151,46 @@ function addCartProd() {
 }
 
 addCartProd();
+
+//#region shipping
+// let i = 0;
+// let previousPrice = [];
+// let shipPrice;
+//#endregion
+
+//#region shipping
+// let shippingButtons = document.querySelectorAll(".shipping_buttons");
+
+// let shippingPrice = function (btn) {
+//   btn.addEventListener("click", () => {
+//     let freeShipping = document.querySelector(
+//       'input[name="radio_btn_shipping"]:checked'
+//     );
+//     addCartProd();
+//     if (freeShipping.checked) {
+//       let total = document.querySelector(".total_price");
+//       total.innerHTML = `${
+//         Number(total.innerHTML.slice(0, -1)) + Number(freeShipping.value)
+//       }$`;
+//       shipPrice = Number(freeShipping.value);
+//     }
+//   });
+// };
+//#endregion
+
+//#region shipping
+// shippingButtons.forEach((btn) => {
+//   shippingPrice(btn);
+//   console.log(shipPrice);
+//   if (shipPrice != undefined) {
+//     console.log("slm");
+//     productPrice =
+//       Number(total.innerHTML.slice(0, -1)) + item.newPrice * item.count;
+//     total.innerHTML = `${productPrice + shipPrice}$`;
+//   } else {
+//     productPrice =
+//       Number(total.innerHTML.slice(0, -1)) + item.newPrice * item.count;
+//     total.innerHTML = `${productPrice}$`;
+//   }
+// });
+//#endregion

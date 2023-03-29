@@ -555,9 +555,6 @@
   &_title {
     font-size: 5rem;
     font-weight: 500;
-
-    // animation: bounce 3.6s infinite linear;
-    // animation-delay: 0.2s;
   }
 
   &_info {
@@ -668,8 +665,6 @@
       @include d-flex(column, flex-end, center);
     }
   }
-  // clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  // clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 }
 .category_item_details:hover {
   .category_item_details_btn {
@@ -719,7 +714,6 @@
 }
 
 .product_items {
-  // background-image: url("../sass/image/homepage/latest1.jpg.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

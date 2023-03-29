@@ -45,8 +45,6 @@ signUp.addEventListener("click", () => {
         if (!emailExist) {
           return;
         }
-        // console.log(`registerUser ${emailRegister.value}`);
-        // console.log(`ALREADYregisterUser ${user.email}`);
         if (emailRegister.value == user.email) {
           emailRegisterWarn.style.opacity = 1;
           emailRegisterWarn.innerHTML = "Email already exists.";
@@ -59,8 +57,6 @@ signUp.addEventListener("click", () => {
         }
       });
     }
-
-    // console.log(emailExist);
 
     if (emailExist) {
       let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
@@ -117,11 +113,6 @@ signUp.addEventListener("click", () => {
   setTimeout(conPasswordRegisterWarnMsg(checkPassw), 500);
   let registerStep3 = conPasswordRegisterWarnMsg(checkPassw);
 
-  // window.addEventListener("click", (e) => {
-  // if (e.target.id == "signUp") {
-  // console.log(checkPassw);
-  // console.log(cpasswRegister.value);
-
   if (registerStep1 && registerStep2 && registerStep3) {
     console.log("true");
     let user = {
@@ -135,16 +126,11 @@ signUp.addEventListener("click", () => {
     passwRegister.value = "";
     cpasswRegister.value = "";
 
-    // console.log(registeredUserArr);
-
     if (localStorage.getItem("registered_user") != null) {
-      // console.log("Null deyil");
       registeredUserArr = JSON.parse(localStorage.getItem("registered_user"));
     }
 
-    // console.log(registeredUserArr);
     registeredUserArr.push(user);
-    // console.log(registeredUserArr);
 
     localStorage.setItem("registered_user", JSON.stringify(registeredUserArr));
 
@@ -155,18 +141,10 @@ signUp.addEventListener("click", () => {
       successMsg.classList.toggle("display_hidden_msg");
     }, 3000);
     successMsg.classList.toggle("display_hidden_msg");
-
-    // window.location.href = "index.html";
   } else {
     console.log("false");
   }
-  // }
-  // });
 });
-
-//#endregion
-
-//#region Login
 
 let signIn = document.querySelector(".modal_submit_login");
 
